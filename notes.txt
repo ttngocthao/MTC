@@ -1,0 +1,6 @@
+hosting on nexlify, godaddy domanin name: 
+    https://dev.to/ivanadokic/hosting-gatsby-site-using-a-godaddy-domain-netlify-gatsby-netlify-react-hosting-e
+    https://morioh.com/p/fe1f365f7008
+    https://uk.godaddy.com/help/change-an-a-record-19239
+upload build folder to godaddy server
+    https://dev.to/crishanks/deploy-host-your-react-app-with-cpanel-in-under-5-minutes-4mf6
