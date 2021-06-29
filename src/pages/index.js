@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 /** @jsx jsx */
-import { jsx, Box, useThemeUI } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 
 
