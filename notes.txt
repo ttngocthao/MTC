@@ -4,3 +4,5 @@ hosting on nexlify, godaddy domanin name:
     https://uk.godaddy.com/help/change-an-a-record-19239
 upload build folder to godaddy server
     https://dev.to/crishanks/deploy-host-your-react-app-with-cpanel-in-under-5-minutes-4mf6
+
+card carousel : https://www.npmjs.com/package/react-multi-carousel

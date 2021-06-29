@@ -2,7 +2,7 @@ const theme = {
     colors: {
         primary: '#222222',
         secondary: '#f43908',
-        text: 'white'
+        text: '#222222'
     },
     fonts: {
         body: "Barlow,sans- serif",

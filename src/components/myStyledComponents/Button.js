@@ -6,5 +6,3 @@ export const StyledTealButton = styled.button`
 `
 
 
-
-
