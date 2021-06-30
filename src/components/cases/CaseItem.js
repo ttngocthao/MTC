@@ -19,6 +19,7 @@ const RedArrowRight = styled(RightArrowAlt)`
     color:#f43908;
 
 `
+
 const ViewCaseButton = styled.a`
     background-color: #222;
     color:white;
@@ -26,7 +27,7 @@ const ViewCaseButton = styled.a`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 150px;
+    max-width: 175px;
     width: 100%;
     text-decoration: none;
     position: absolute;
@@ -35,18 +36,39 @@ const ViewCaseButton = styled.a`
 `
 const CaseDescriptionWrap = styled.div`
     background-color: #f43908;
-    color:#222;
+    color:#000;
     text-transform: uppercase;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    padding:2rem;
+    border: .5px solid #000;
+    font-size:2.25rem;
+    font-weight: 600;
+    box-sizing: border-box;
+    line-height: 1.2;
+    opacity: 0;
+    transition:.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 `
 
 const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
     const [showDescription, setShowDescription] = useState(false)
+    const hoveredViewCaseBtnStyles = {border:'#000 solid 2px',borderRadius:'5px',backgroundColor:'rgba(0,0,0,0)',color:'#000'}
+    const hoveredArrowStyles ={color:'#000'}
+    const mouseEnterHandle =()=>{
+        setShowDescription(true)
+    }
+    const mouseLeaveHandle =()=>{
+        setShowDescription(false)
+    }
     return (
-        <ItemWrap style={{ color: 'blue', backgroundImage: `url(${bkgImg})` }}>
-            {showDescription && <CaseDescriptionWrap>{description}</CaseDescriptionWrap>}
-            <ViewCaseButton href={pageUrl} target='_blank'>
+        <ItemWrap style={{ backgroundImage: `url(${bkgImg})`}} onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
+            <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
+            <ViewCaseButton href={pageUrl} target='_blank' style={showDescription ? hoveredViewCaseBtnStyles : null}>
                 <span style={{ paddingRight: '1rem' }}>{title}</span>
-                <RedArrowRight size='24' />
+                <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
             </ViewCaseButton>
         </ItemWrap>
     )
