@@ -24,7 +24,7 @@ const StyledFooter = styled.footer`
     background-color: #f43908;
     color: #222;
     text-align: right;
-    padding:2rem;
+    padding:2rem 5rem;
 `
 const SocialMediaItem = styled.a`
     display: inline-block;

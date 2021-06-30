@@ -74,7 +74,7 @@ const UlList = styled.ul`
     padding: 0;
     display: flex;
     flex-direction: column;
-    @media only screen and (min-width: 768px){
+    @media only screen and (min-width: 1024px){
         flex-direction: row;
         flex-wrap: wrap;
         max-width: 1200px;

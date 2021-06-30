@@ -5,8 +5,7 @@ import { RightArrowAlt } from '@styled-icons/boxicons-regular/'
 const ItemWrap = styled.li`
     min-width:300px;
     min-height:200px;
-    width: 100%;
-    max-width: 600px;
+    width: 100%;   
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,6 +13,9 @@ const ItemWrap = styled.li`
     box-sizing: border-box;
     position: relative;
     margin: 0 auto;
+    @media only screen and (min-width: 1024px){
+         max-width: 50%;
+    }
 `
 const RedArrowRight = styled(RightArrowAlt)`
     color:#f43908;
