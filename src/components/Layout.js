@@ -2,6 +2,7 @@ import React from 'react'
 import Seo from './Seo'
 import styled from 'styled-components'
 import Footer from './footer/Footer'
+
 const LayoutWrap = styled.section`
     max-width: 1200px;
     margin: 0 auto;
