@@ -20,6 +20,10 @@ const theme = {
             color: 'secondary',
             backgroundColor: 'primary',
             padding: 2
+        },
+        whiteText:{
+            fontFamily:'heading',
+            color:'white'
         }
     }
 }
