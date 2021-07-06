@@ -1,0 +1,103 @@
+ * {
+       
+        font-family: "Barlow", sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        box-sizing: border-box;
+        font-weight: 400;
+      }
+      /* html,body{
+           background-color: #222222!important;
+      } */
+      .constructionPage h1 {
+        color: white;
+        font-size: 2.5rem;
+        max-width: 450px;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+      }
+      .constructionPage .logo{
+        margin-bottom: 0rem;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 47px;
+      }
+      .constructionPage .logo img{
+        width: 100%;
+      }
+      .constructionPage h3{
+        color:#f43908;
+        font-size: 1.25rem;
+        font-weight:600;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .constructionPage .p{
+        color: white;
+        max-width: 450px;
+      }
+      main{
+        max-width: 1200px;
+        margin:2.5rem auto;
+      }
+      .constructionPage .mainContent{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+       .constructionPage .photo figure{
+           margin:0;
+           max-width: 300px;
+         }
+      .constructionPage .photo figure img{
+           width: 100%;
+      }
+      .socialMedia{
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+      }
+      .socialMedia li{
+        list-style: none;
+        margin-right: 1rem;
+      }
+      .socialMedia .contactBtn{
+       
+        text-transform: uppercase;
+        border:2px solid #f43908;
+        padding: .1rem 1.5rem;
+        margin-right: 2rem;
+        border-radius: 5px;
+      }
+      .socialMedia .contactBtn a{
+         color: white;
+         text-decoration: none;
+         font-size: 1.5rem;
+         font-weight: 900;
+         letter-spacing: .1rem;
+      }
+      @media only screen and (min-width: 768px){
+        .constructionPage h1 {
+          font-size: 4rem;
+        }
+         .constructionPage h3{
+           font-size: 2rem;
+         }
+         .constructionPage .mainContent{
+           flex-direction: row-reverse;
+           align-items: flex-end;
+          justify-content: space-between;
+        
+         }
+          .constructionPage .info{
+            padding-right: 2.5rem;
+          }
+         .constructionPage .photo figure{          
+           max-width: 700px;
+           margin: 0 ;
+           min-width: 250px;
+         }
+      }

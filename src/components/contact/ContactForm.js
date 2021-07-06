@@ -114,6 +114,7 @@ const ContactForm = () => {
                 validate={(values)=>validate(values)}
                 onSubmit={async (values) => {
                     const mailSendUrl = 'http://mightycultured.co.uk/mail_form.php'
+                    
                     const res = await fetch(mailSendUrl,{
                         method: 'POST', // *GET, POST, PUT, DELETE, etc.
                         mode: 'no-cors', // no-cors, *cors, same-origin
@@ -125,7 +126,7 @@ const ContactForm = () => {
                         },
                         // redirect: 'follow', // manual, *follow, error
                         // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                        body: values // body data type must match "Content-Type" header
+                        body: new URLSearchParams(values) // body data type must match "Content-Type" header
                     })
                     // await new Promise((r) => setTimeout(r, 500));
                     // alert(JSON.stringify(values, null, 2));
