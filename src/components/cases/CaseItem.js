@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { RightArrowAlt } from '@styled-icons/boxicons-regular/'
 const ItemWrap = styled.li`
     min-width:300px;
-    min-height:200px;
+    min-height:300px;
     width: 100%;   
     background-position: center;
     background-size: cover;
@@ -12,9 +12,11 @@ const ItemWrap = styled.li`
     list-style: none;
     box-sizing: border-box;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     @media only screen and (min-width: 1024px){
          max-width: 50%;
+          min-height:250px;
+          margin: 0 auto;
     }
 `
 const RedArrowRight = styled(RightArrowAlt)`
@@ -55,6 +57,8 @@ const CaseDescriptionWrap = styled.div`
     transition:.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 `
 
+
+
 const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
     const [showDescription, setShowDescription] = useState(false)
     const hoveredViewCaseBtnStyles = {border:'#000 solid 2px',borderRadius:'5px',backgroundColor:'rgba(0,0,0,0)',color:'#000'}
@@ -68,10 +72,14 @@ const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
     return (
         <ItemWrap style={{ backgroundImage: `url(${bkgImg})`}} onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
             <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
-            <ViewCaseButton href={pageUrl} target='_blank' style={showDescription ? hoveredViewCaseBtnStyles : null}>
-                <span style={{ paddingRight: '1rem' }}>{title}</span>
-                <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
-            </ViewCaseButton>
+           
+                {showDescription && 
+                    <ViewCaseButton href={pageUrl} target='_blank' style={showDescription ? hoveredViewCaseBtnStyles : null}>
+                        <h3 style={{ paddingRight: '1rem',marginBottom:0 }}>{title}</h3>
+                        <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
+                    </ViewCaseButton>
+                }
+            
         </ItemWrap>
     )
 }

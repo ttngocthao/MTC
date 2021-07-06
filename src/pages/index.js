@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import {Link} from 'gatsby'
 import 'semantic-ui-css/semantic.min.css';
 import LogoCoreImg from '../images/LogoCore.svg'
 import ConstructionImg from '../images/construction.png'
@@ -20,7 +21,7 @@ const IndexPage = () => {
   return (
     <div className="constructionPage">
    
-    <main>
+    <main className='main'>
       <figure className="logo">
         <img
           src={LogoCoreImg}
@@ -43,9 +44,9 @@ const IndexPage = () => {
       </section>
       <ul className="socialMedia">
         <li className="contactBtn"><a href="mailto:team@mightycultured.co.uk">contact</a></li>
-        <li><a target="_blank" href="https://www.behance.net/mightycultured"><img alt='' src={BeImg}/></a></li>
-        <li><a target="_blank" href="https://www.instagram.com/mightycultured/"><img alt='' src={IImg}/></a></li>
-        <li><a target="_blank" href="https://www.facebook.com/Mighty-Cultured-426372721081128"><img alt='' src={FImg}/></a></li>
+        <li><Link to="https://www.behance.net/mightycultured"><img alt='' src={BeImg}/></Link></li>
+        <li><Link to="https://www.instagram.com/mightycultured/"><img alt='' src={IImg}/></Link></li>
+        <li><Link to="https://www.facebook.com/Mighty-Cultured-426372721081128"><img alt='' src={FImg}/></Link></li>
       </ul>  
     </main>
    

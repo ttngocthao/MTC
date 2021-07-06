@@ -1,13 +1,13 @@
 import React from 'react'
 import CaseItem from './CaseItem'
-import Case1Img from '../../images/cases/case1.png';
-import Case2Img from '../../images/cases/case2.png';
-import Case3Img from '../../images/cases/case3.png';
-import Case4Img from '../../images/cases/case4.png';
-import Case5Img from '../../images/cases/case5.png';
-import Case6Img from '../../images/cases/case6.png';
-import Case7Img from '../../images/cases/case7.png';
-import Case8Img from '../../images/cases/case8.png';
+import Case1Img from '../../images/cases/Layer2.png';
+import Case2Img from '../../images/cases/Layer3.png';
+import Case3Img from '../../images/cases/Layer4.png';
+import Case4Img from '../../images/cases/Layer5.png';
+import Case5Img from '../../images/cases/Layer6.png';
+import Case6Img from '../../images/cases/Layer7.png';
+import Case7Img from '../../images/cases/Layer8.png';
+import Case8Img from '../../images/cases/Layer9.png';
 import styled from 'styled-components';
 
 const caseStudyData = [
@@ -16,7 +16,7 @@ const caseStudyData = [
         description: 'TITLE 1 GOES HERE TO DESCRIBE BUSINESS',
         bkgImg: Case1Img,
         pageUrl: '#',
-        orderInList: 0
+        orderInList: 0,
     },
     {
         title: 'Case 2',
@@ -26,16 +26,16 @@ const caseStudyData = [
         orderInList: 1
     },
     {
-        title: 'Case 3',
-        description: 'TITLE 3 GOES HERE TO DESCRIBE BUSINESS',
-        bkgImg: Case3Img,
-        pageUrl: '#',
-        orderInList: 2
-    },
-    {
         title: 'Case 4',
         description: 'TITLE 4 GOES HERE TO DESCRIBE BUSINESS',
         bkgImg: Case4Img,
+        pageUrl: '#',
+        orderInList: 2
+    },
+     {
+        title: 'Case 3',
+        description: 'TITLE 3 GOES HERE TO DESCRIBE BUSINESS',
+        bkgImg: Case3Img,
         pageUrl: '#',
         orderInList: 3
     },

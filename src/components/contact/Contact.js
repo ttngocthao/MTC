@@ -1,5 +1,4 @@
 import ContactForm from './ContactForm'
-import {Container} from 'semantic-ui-react'
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
 import styled from 'styled-components'
@@ -27,7 +26,7 @@ const Contact = () => {
         <StyledContainer>
                 
                 <div>
-                    <h2 sx={theme.styles.h2,theme.styles.whiteText}>
+                    <h2 sx={theme.styles.h2}>
                     LET’S BUILD YOUR CULTURE
                     </h2>    
             
