@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import 'semantic-ui-css/semantic.min.css';
 /** @jsx jsx */
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import CaseStudyList from '../components/cases/CaseStudyList';
 import Contact  from '../components/contact/Contact';
 import Hero from '../components/hero/Hero';

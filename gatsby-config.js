@@ -17,7 +17,7 @@ module.exports = {
       options: {
         name: "Mighty Cultured",
         short_name: "Mighty Cltd",
-        start_url: "/",
+        start_url: "/workingHomePage",
         background_color: "#222222",
         theme_color: "#222222",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
