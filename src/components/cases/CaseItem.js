@@ -75,7 +75,7 @@ const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
            
                 {showDescription && 
                     <ViewCaseButton href={pageUrl} target='_blank' style={showDescription ? hoveredViewCaseBtnStyles : null}>
-                        <h3 style={{ paddingRight: '1rem',marginBottom:0 }}>{title}</h3>
+                        <h3 style={{ paddingRight: '1rem',marginBottom:0,fontWeight:400 }}>{title}</h3>
                         <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
                     </ViewCaseButton>
                 }
