@@ -18,7 +18,18 @@ const StyledContainer = styled.div`
          padding-right: 4rem;
      }
 `
-
+export const StyledTitle = styled.h2`
+    color:white;
+    font-weight: 900;
+    font-size:3rem;
+    line-height: 1;
+    max-width: 200px;
+    text-transform: uppercase;
+      @media only screen and (min-width: 700px){
+          max-width:300px;
+         
+      }
+`
 
 const Contact = () => {
     const { theme } = useThemeUI();
@@ -26,9 +37,9 @@ const Contact = () => {
         <StyledContainer>
                 
                 <div>
-                    <h2 sx={theme.styles.h2}>
+                    <StyledTitle>
                     LET’S BUILD YOUR CULTURE
-                    </h2>    
+                    </StyledTitle>    
             
                     <p style={{maxWidth:'400px',paddingRight:'1rem'}}  sx={theme.styles.whiteText}>Veniam incididunt magna sunt esse. Qui commodo anim ad incididunt ipsum quis consequat velit est aliqua in. Sunt culpa minim nostrud culpa ipsum duis aute ad labore incididunt fugiat. Qui eiusmod quis enim ullamco nulla aliquip tempor dolore veniam non anim deserunt amet. Sunt excepteur aliqua commodo aliqua ad esse fugiat.</p>
     

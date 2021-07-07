@@ -33,7 +33,7 @@ const TitleWrap = styled.div`
         margin: .5rem 1rem 0;
         color:#f43908;
         font-size:1rem;
-        font-weight: 400;
+        font-weight: 600;
          @media only screen and (min-width: 600px){
               max-width: 700px;
               margin: .5rem auto 0;

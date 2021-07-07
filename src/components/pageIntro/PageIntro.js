@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const IntroWrap = styled.div`
     max-width: 1200px;
     margin:0 auto;
-    padding:3rem 0;
+    padding:3rem 1rem;
    p{
        max-width: 700px;
        margin:0 auto;

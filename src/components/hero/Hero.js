@@ -17,6 +17,7 @@ const Container = styled.section`
     margin:0 auto;
     max-width: 1200px;
     position: relative;
+    background-color: #222;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,13 +63,13 @@ const Container = styled.section`
 //         }
 //     }
 // `
-const Hero = ({heroSrc,pageTitle}) => {
+const Hero = ({heroSrc,pageTitle,noTopLayout}) => {
     if(!heroSrc){
         heroSrc = FullHomeHero;
     }
-    
+    const backgroundImageStyle = noTopLayout ? `url(${heroSrc})`: `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${heroSrc})`
     return (
-        <Container style={{backgroundImage:`linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${heroSrc})`}}>
+        <Container style={{backgroundImage:backgroundImageStyle}}>
             {/* <HeroImgWrap>
                 <img src={HomeHeroImg} alt=''/>
             </HeroImgWrap> */}
