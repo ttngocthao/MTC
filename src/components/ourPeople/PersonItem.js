@@ -4,8 +4,15 @@ import styled from 'styled-components'
 const ItemContainer = styled.div`
     max-width:700px;
     width:100%;
+    padding-bottom: 1rem;
     @media only screen and (min-width: 741px){
-        max-width: 340px;
+         padding-bottom: 0rem;
+       :first-child{
+           padding-right: 1rem;
+       }
+       :last-child{
+           padding-left: 1rem;
+       }
     }
     p{
         margin-bottom:1rem;
@@ -14,7 +21,7 @@ const ItemContainer = styled.div`
 const ItemAvatar = styled.figure`
     margin:0;
     padding:0;
-    max-width: 340px;
+    max-width: 536px;
     img{
         width:100%;
         vertical-align: bottom;

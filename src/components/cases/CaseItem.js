@@ -15,7 +15,7 @@ const ItemWrap = styled.li`
     margin: 0 auto 1rem;
     @media only screen and (min-width: 1024px){
          max-width: 50%;
-          min-height:250px;
+          min-height:327px;
           margin: 0 auto;
     }
 `
@@ -49,8 +49,8 @@ const CaseDescriptionWrap = styled.div`
     right: 0;
     padding:2rem;
     border: .5px solid #000;
-    font-size:2.25rem;
-    font-weight: 600;
+    font-size:3rem;
+    font-weight: 900;
     box-sizing: border-box;
     line-height: 1.2;
     opacity: 0;

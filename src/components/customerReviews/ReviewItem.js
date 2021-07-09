@@ -7,8 +7,12 @@ const StyledReviewItem = styled.div`
     margin:1rem auto;
     padding:1.5rem;
     @media only screen and (min-width: 920px){
-        max-width:290px;
+        max-width:398px;
         margin: 1rem 0;
+        &:nth-child(2){
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
         /* &:first-child{
             margin-left:0;
         }

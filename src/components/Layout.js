@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Footer from './footer/Footer'
 
 const LayoutWrap = styled.section`
-    max-width: 1200px;
+    max-width: 1920px;
     margin: 0 auto;
 `
 

@@ -6,7 +6,7 @@ const StyledContainer = styled.div`
     background-color: #222;
 `
 const StyledListWrap = styled.div`
-    max-width:900px;
+    max-width:1376px;
     margin:0 auto;
     padding:3rem 1rem;
     display:block;
@@ -15,9 +15,12 @@ const StyledListWrap = styled.div`
        display: flex;
        align-items: center;
        justify-content: space-between;
-       padding-left:0;
-       padding-right:0;
+      
     }
+    /* @media only screen and (min-width:1300px){
+         padding-left:0;
+       padding-right:0;
+    } */
 `
 const reviewData =[
     {

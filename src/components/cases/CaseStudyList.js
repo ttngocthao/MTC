@@ -77,7 +77,7 @@ const UlList = styled.ul`
     @media only screen and (min-width: 1024px){
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 1200px;
+        max-width: 1920px;
         
     }
 `

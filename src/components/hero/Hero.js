@@ -6,7 +6,7 @@ import TitleWrap from '../pageTitle/PageTitle'
 // const HeroImgWrap = styled.figure`
 //     padding:0;
 //     margin:0 auto;
-//     max-width: 1200px;
+//     max-width: 1920px;
 //     img{
 //         width:100%;
 //         vertical-align: bottom;
@@ -15,22 +15,22 @@ import TitleWrap from '../pageTitle/PageTitle'
 const Container = styled.section`
     padding:0;
     margin:0 auto;
-    max-width: 1200px;
+    max-width: 1920px;
     position: relative;
     background-color: #222;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-width:300px;
-    min-height:400px;
+    min-height:450px;
     width: 100%;  
     @media only screen and (min-width: 1024px){
-            min-height:300px;
+            min-height:470px;
             background-position:  center 70%;
     }
 `
 // const HomeTitleWrap = styled.div`
-//     max-width: 1200px;
+//     max-width: 1920px;
 //     position: absolute;
 //     color: white;
 //     top: 50%;
