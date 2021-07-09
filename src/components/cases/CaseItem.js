@@ -31,7 +31,7 @@ const ViewCaseButton = styled.a`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 175px;
+    max-width: 228px;
     width: 100%;
     text-decoration: none;
     position: absolute;
@@ -49,12 +49,16 @@ const CaseDescriptionWrap = styled.div`
     right: 0;
     padding:2rem;
     border: .5px solid #000;
-    font-size:3rem;
+    font-size: 3rem;
     font-weight: 900;
     box-sizing: border-box;
     line-height: 1.2;
     opacity: 0;
     transition:.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    @media only screen and (min-width: 600px){            
+              font-size: 4.3rem;
+              /* padding-left: 1rem; */
+         }
 `
 
 

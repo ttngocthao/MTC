@@ -5,7 +5,7 @@ import ReviewItem from './ReviewItem'
 const StyledContainer = styled.div`
     background-color: #222;
 `
-const StyledListWrap = styled.div`
+export const StyledListWrap = styled.div`
     max-width:1376px;
     margin:0 auto;
     padding:3rem 1rem;
@@ -13,6 +13,7 @@ const StyledListWrap = styled.div`
     width:100%;
     @media only screen and (min-width: 920px){
        display: flex;
+       /* flex-wrap: wrap; */
        align-items: center;
        justify-content: space-between;
       

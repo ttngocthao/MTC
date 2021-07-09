@@ -24,13 +24,13 @@ const StyledContainer = styled.div`
 export const StyledTitle = styled.h2`
     color:white;
     font-weight: 900;
-    font-size:3rem;
+    font-size: 3rem;
     line-height: 1;
     max-width: 200px;
     text-transform: uppercase;
       @media only screen and (min-width: 700px){
-          max-width:300px;
-         
+          max-width:450px;
+         font-size: 4.3rem;
       }
 `
 

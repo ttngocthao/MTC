@@ -51,10 +51,11 @@ const StyledSubTitle = styled.h3`
         max-width: 1120px;
         margin:  0;
         color:#f43908;
-        font-size:1rem;
+        font-size:1.2rem;
         font-weight: 600;
          @media only screen and (min-width: 700px){
-           max-width: 340px;
+           max-width: 400px;
+           font-size:2.15rem;
          }
 `
 const WorkingHomePage = () => {
@@ -69,7 +70,7 @@ const WorkingHomePage = () => {
       <PageIntro>
           <StyledParagraph> 
             <div  className='leftCol'>
-               <StyledTitle style={{color:'black',maxWidth:'300px'}}>
+               <StyledTitle style={{color:'black',maxWidth:'540px'}}>
             Who are we?
             </StyledTitle>
             <StyledSubTitle>
