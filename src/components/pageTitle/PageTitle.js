@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TitleWrap = styled.div`
-    max-width: 1200px;
+    max-width: 1920px;
     position: absolute;
     color: white;
     top: 50%;
@@ -10,38 +10,35 @@ const TitleWrap = styled.div`
     transform: translate(-50%, -50%);
     /* background-color: red; */
     width: 100%;
+    /* padding:0 1rem; */
     h1{
         max-width: 220px;
         line-height: 1;
-        margin: 0 1rem ;
+        margin: 0 ;
         color:white;
         font-size: 3rem;
         font-weight:900;
         font-family: 'Barlow';
         
          @media only screen and (min-width: 600px){
-              max-width: 700px;
+              max-width: 1120px;
               margin: 0 auto ;
-              padding-left: 1rem;
+              /* padding-left: 1rem; */
          }
-          @media only screen and (min-width: 1024px){
-             padding-left: 0;
-        }
+         
     }
     h2{
         max-width: 220px;
-        margin: .5rem 1rem 0;
+        margin: .5rem 0;
         color:#f43908;
         font-size:1rem;
         font-weight: 600;
          @media only screen and (min-width: 600px){
-              max-width: 700px;
+              max-width: 1120px;
               margin: .5rem auto 0;
-              padding-left: 1rem;
+              /* padding-left: 1rem; */
          }
-        @media only screen and (min-width: 1024px){
-            padding-left: 0;
-        }
+        
     }
 `
 
@@ -52,18 +49,22 @@ const ContactTitleWrap = styled(TitleWrap)`
         padding:0 1rem;
         @media only screen and (min-width: 450px){
            
-             max-width: 1200px;
+             max-width: 1920px;
         }
         @media only screen and (min-width: 700px){
-            padding:0 4rem;
-             max-width: 1200px;
+            /* padding:0 4rem;
+             max-width: 1920px; */
+              max-width: 1640px;
+              margin: 0 auto ;
         }
     }
     h2{
-        max-width: 1200px;
-        /* padding:0 1rem; */
+        max-width: 1920px;
+        padding:0 1rem;
         @media only screen and (min-width: 700px){
-            padding:0 4rem;
+            /* padding:0 4rem; */
+             max-width: 1640px;
+             margin: 0 auto ;
         }
     }
    

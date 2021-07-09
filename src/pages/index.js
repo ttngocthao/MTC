@@ -45,7 +45,7 @@ const IndexPage = () => {
       <ul className="socialMedia">
         <li className="contactBtn"><a href="mailto:team@mightycultured.co.uk">contact</a></li>
         <li><Link to="https://www.behance.net/mightycultured"><img alt='' src={BeImg}/></Link></li>
-        <li><Link to="https://www.instagram.com/mightycultured/"><img alt='' src={IImg}/></Link></li>
+        <li><Link to="https://www.instagram.com/mightyculturedltd/"><img alt='' src={IImg}/></Link></li>
         <li><Link to="https://www.facebook.com/Mighty-Cultured-426372721081128"><img alt='' src={FImg}/></Link></li>
       </ul>  
     </main>

@@ -19,7 +19,7 @@ import SanchoAvatar from '../images/sancho.png';
 // markup
 
 const StyledParagraph = styled.div`
-  max-width:700px;
+  max-width:1120px;
   margin:0 auto;
   display:flex;
   flex-direction:column;
@@ -30,25 +30,25 @@ const StyledParagraph = styled.div`
    }
    .leftCol{
      padding-bottom: 1rem;
-     max-width:700px;
+     max-width:1120px;
      width:100%;
-     @media only screen and (min-width: 700px){
+     /* @media only screen and (min-width: 700px){
        max-width:340px;
-     }
+     } */
    }
    .rightCol {
-     max-width:700px;
+     max-width:1120px;
      width:100%;
-     @media only screen and (min-width: 741px){
+     /* @media only screen and (min-width: 741px){
        max-width:340px;
-     }
+     } */
      p{
        margin-bottom:1rem;
      }
    }
 `
 const StyledSubTitle = styled.h3`
-        max-width: 700px;
+        max-width: 1120px;
         margin:  0;
         color:#f43908;
         font-size:1rem;

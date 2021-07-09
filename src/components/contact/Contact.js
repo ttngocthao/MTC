@@ -3,6 +3,10 @@ import ContactForm from './ContactForm'
 import { jsx, useThemeUI } from 'theme-ui'
 import styled from 'styled-components'
 
+const Wrap = styled.div`
+    background-color: #222;
+     max-width: 1920px;
+`
 const StyledContainer = styled.div`
     background-color: #222;
     font-family: 'Barrow';
@@ -11,11 +15,10 @@ const StyledContainer = styled.div`
     flex-direction: column;
      @media only screen and (min-width: 700px){
          flex-direction: row;
-         max-width: 1200px;
+         max-width: 1640px;
          margin: 0 auto;
          justify-content: space-between;
-         padding-left: 4rem;
-         padding-right: 4rem;
+         
      }
 `
 export const StyledTitle = styled.h2`
@@ -34,22 +37,17 @@ export const StyledTitle = styled.h2`
 const Contact = () => {
     const { theme } = useThemeUI();
     return (
-        <StyledContainer>
-                
+        <Wrap>
+            <StyledContainer>                
                 <div>
                     <StyledTitle>
                     LET’S BUILD YOUR CULTURE
-                    </StyledTitle>    
-            
-                    <p style={{maxWidth:'400px',paddingRight:'1rem'}}  sx={theme.styles.whiteText}>Veniam incididunt magna sunt esse. Qui commodo anim ad incididunt ipsum quis consequat velit est aliqua in. Sunt culpa minim nostrud culpa ipsum duis aute ad labore incididunt fugiat. Qui eiusmod quis enim ullamco nulla aliquip tempor dolore veniam non anim deserunt amet. Sunt excepteur aliqua commodo aliqua ad esse fugiat.</p>
-    
-                </div>
-               
+                    </StyledTitle>             
+                    <p style={{maxWidth:'675px',paddingRight:'1rem'}}  sx={theme.styles.whiteText}>Veniam incididunt magna sunt esse. Qui commodo anim ad incididunt ipsum quis consequat velit est aliqua in. Sunt culpa minim nostrud culpa ipsum duis aute ad labore incididunt fugiat. Qui eiusmod quis enim ullamco nulla aliquip tempor dolore veniam non anim deserunt amet. Sunt excepteur aliqua commodo aliqua ad esse fugiat.</p>
+                </div>               
                 <ContactForm/>
-              
-            
-            
-        </StyledContainer>
+            </StyledContainer>
+        </Wrap>
     )
 }
 

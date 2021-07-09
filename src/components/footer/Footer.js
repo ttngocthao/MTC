@@ -20,11 +20,19 @@ const socialMediaData = [
         orderInList: 3
     }
 ]
-const StyledFooter = styled.footer`
-    background-color: #f43908;
+
+const Wrap = styled.footer`
+    background-color: #f43908; 
+   
+`
+
+const StyledFooter = styled.div`
+    max-width:1640px;
+    margin:0 auto;
     color: #222;
-    text-align: right;
-    padding:2rem 5rem;
+    text-align: right; 
+    padding:2rem 1rem;
+   
 `
 const SocialMediaItem = styled.a`
     display: inline-block;
@@ -32,12 +40,16 @@ const SocialMediaItem = styled.a`
     box-sizing: border-box;
 `
 const Footer = () => {
+
     return (
-        <StyledFooter>
+        <Wrap>
+            <StyledFooter>
             {socialMediaData.map((item, index) => <SocialMediaItem key={index} target='_blank' href={item.linkUrl}>
                 <img src={item.iconImg} style={{ width: '1.5rem' }} alt='' />
             </SocialMediaItem>)}
         </StyledFooter>
+        </Wrap>
+        
     )
 }
 
