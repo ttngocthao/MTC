@@ -15,7 +15,8 @@ const StyledContainer = styled.div`
     flex-direction: column;
      @media only screen and (min-width: 700px){
          flex-direction: row;
-         max-width: 1640px;
+         /* max-width: 1640px; */
+         padding:2rem 7.3%;
          margin: 0 auto;
          justify-content: space-between;
          
@@ -39,7 +40,7 @@ const Contact = () => {
     return (
         <Wrap>
             <StyledContainer>                
-                <div>
+                <div style={{paddingRight:'2%'}}>
                     <StyledTitle>
                     LET’S BUILD YOUR CULTURE
                     </StyledTitle>             
