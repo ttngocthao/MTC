@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledReviewItem = styled.div`
+export const StyledReviewItem = styled.div`
     background-color: white;
     width: 100%;
     margin:1rem auto;
@@ -21,7 +21,7 @@ const StyledReviewItem = styled.div`
         } */
     }
 `
-const StyledInitial = styled.div`
+export const StyledInitial = styled.div`
    width: 5rem;
    height:5rem;
    background-color: #222;
@@ -30,14 +30,14 @@ const StyledInitial = styled.div`
 `
 const StyledName = styled.h2`
     font-weight:600;
-    font-size:2rem;
+     font-size:2.15rem;
     margin-bottom: 0;
 `
 const StyledRole = styled.h3`
     margin-top: .5rem;
     color:#f43908;
     font-weight:600;
-    font-size:1rem;
+    font-size:1.2rem;
 `
 const ReviewItem = ({name,brand,msg}) => {
     return (

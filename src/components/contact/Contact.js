@@ -15,7 +15,8 @@ const StyledContainer = styled.div`
     flex-direction: column;
      @media only screen and (min-width: 700px){
          flex-direction: row;
-         max-width: 1640px;
+         /* max-width: 1640px; */
+         padding:2rem 7.3%;
          margin: 0 auto;
          justify-content: space-between;
          
@@ -24,13 +25,13 @@ const StyledContainer = styled.div`
 export const StyledTitle = styled.h2`
     color:white;
     font-weight: 900;
-    font-size:3rem;
+    font-size: 3rem;
     line-height: 1;
     max-width: 200px;
     text-transform: uppercase;
       @media only screen and (min-width: 700px){
-          max-width:300px;
-         
+          max-width:450px;
+         font-size: 4.3rem;
       }
 `
 
@@ -39,7 +40,7 @@ const Contact = () => {
     return (
         <Wrap>
             <StyledContainer>                
-                <div>
+                <div style={{paddingRight:'2%'}}>
                     <StyledTitle>
                     LET’S BUILD YOUR CULTURE
                     </StyledTitle>             

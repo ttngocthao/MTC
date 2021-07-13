@@ -10,7 +10,11 @@ const TitleWrap = styled.div`
     transform: translate(-50%, -50%);
     /* background-color: red; */
     width: 100%;
+    padding-left: 1rem;
     /* padding:0 1rem; */
+      @media only screen and (min-width: 1200px){
+          padding-left: 0rem;
+      }
     h1{
         max-width: 220px;
         line-height: 1;
@@ -22,7 +26,8 @@ const TitleWrap = styled.div`
         
          @media only screen and (min-width: 600px){
               max-width: 1120px;
-              margin: 0 auto ;
+              margin: 0 auto ; 
+              font-size: 4.3rem;
               /* padding-left: 1rem; */
          }
          
@@ -31,11 +36,12 @@ const TitleWrap = styled.div`
         max-width: 220px;
         margin: .5rem 0;
         color:#f43908;
-        font-size:1rem;
+        font-size:1.2rem;
         font-weight: 600;
          @media only screen and (min-width: 600px){
               max-width: 1120px;
               margin: .5rem auto 0;
+              font-size:2.15rem;
               /* padding-left: 1rem; */
          }
         
@@ -43,10 +49,13 @@ const TitleWrap = styled.div`
 `
 
 const ContactTitleWrap = styled(TitleWrap)`
+    @media only screen and (min-width: 1200px){
+          padding-left: 1rem;
+      }
     h1{
         max-width: 200px;
         margin: 0;
-        padding:0 1rem;
+      
         @media only screen and (min-width: 450px){
            
              max-width: 1920px;
@@ -60,7 +69,7 @@ const ContactTitleWrap = styled(TitleWrap)`
     }
     h2{
         max-width: 1920px;
-        padding:0 1rem;
+       
         @media only screen and (min-width: 700px){
             /* padding:0 4rem; */
              max-width: 1640px;

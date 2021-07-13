@@ -43,7 +43,7 @@ const Container = styled.section`
 //         line-height: 1;
 //         margin: 0 auto;
 //         color:white;
-//         font-size: 3rem;
+//         font-size: 4.3rem;
 //         font-weight:900;
 //         font-family: 'Barlow';
 //          @media only screen and (min-width: 1024px){
