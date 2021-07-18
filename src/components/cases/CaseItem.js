@@ -35,7 +35,7 @@ const ViewCaseButton = styled.a`
     width: 100%;
     text-decoration: none;
     position: absolute;
-    bottom:1rem;
+    bottom:2rem;
     left: 2rem;
 `
 const CaseDescriptionWrap = styled.div`
@@ -48,7 +48,7 @@ const CaseDescriptionWrap = styled.div`
     bottom: 0;
     right: 0;
     padding:2rem;
-    border: .5px solid #000;
+    /* border: .5px solid #000; */
     font-size: 3rem;
     font-weight: 900;
     box-sizing: border-box;

@@ -56,16 +56,22 @@ const SubmitButton = styled.button`
     text-transform: uppercase;
     border:2px solid #f43908;
     color: white;
-    padding:.25rem .75rem;
-    
+    padding:.25rem .75rem;    
     border-radius: 5px;
     background-color: transparent;
     font-size: 1.25rem;
     width: 100%;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     @media only screen and (min-width: 1024px){
        max-width: 120px ;
       
        
+    }
+    &:hover{
+        background-color:#f43908;
+        color:#222;
+        font-weight:900;
+        letter-spacing: .1rem;
     }
 `
 
