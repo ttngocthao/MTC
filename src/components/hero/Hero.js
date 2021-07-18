@@ -31,6 +31,10 @@ const Container = styled.section`
 `
 const TwoLineTitle = styled.h1`
     line-height: 1;
+    text-transform: uppercase;
+    @media only screen and (min-width: 1024px){
+        font-size: 7rem!important;
+    }
 `
 // const CaseStudyHeroContainer = styled(Container)`
 //     display:none;

@@ -1,28 +1,28 @@
 import React from 'react'
 import CasePageLayout from '../components/cases/CasePageLayout'
-import HeroImg from '../images/cases/garden/fullHero.png'
+import HeroImg from '../images/cases/pet/fullHero.png'
 
 import RectangleImgDisplay from '../components/cases/RectangleImgDisplay'
-import LogoFullWidthImg from '../images/cases/garden/fullLogo.png'
-import ColorPaletteImg from '../images/cases/garden/colourPalette.png'
+import LogoFullWidthImg from '../images/cases/pet/fullLogo.png'
+import ColorPaletteImg from '../images/cases/pet/logoColourVariations.png'
 import TwoImgsInRow from '../components/cases/TwoImgsInRow'
-import TShirtImg from '../images/cases/garden/tshirt.png'
-import BCardImg from '../images/cases/garden/bCard.png'
+import SquareImg1 from '../images/cases/pet/square1.png'
+import SquareImg2 from '../images/cases/pet/square2.png'
 import FourImgsInRow from '../components/cases/FourImgsInRow'
-import Img1 from '../images/cases/garden/img1.png'
-import Img2 from '../images/cases/garden/img2.png'
-import Img3 from '../images/cases/garden/img3.png'
-import Img4 from '../images/cases/garden/img4.png'
+import Img1 from '../images/cases/pet/img1.png'
+import Img2 from '../images/cases/pet/img2.png'
+import Img3 from '../images/cases/pet/img3.png'
+import Img4 from '../images/cases/pet/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
 
-const BeyondGarden = () => {
+const LouiesPlace = () => {
     return (
         <CasePageLayout 
             heroImg={HeroImg} 
-            caseName='Above &#38; Beyond Garden' 
-            caseNameArr={['Above &','Beyond Garden']} 
+            caseName={'LOUIE’S PLACE'} 
+            caseNameArr={['LOUIE’S PLACE']} 
             caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
-                
+            
             <CaseIntro
                 companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
                 briefTextArr={[
@@ -34,11 +34,12 @@ const BeyondGarden = () => {
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
             <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
-            <TwoImgsInRow img1Src={TShirtImg} img2Src={BCardImg}/>
+            <TwoImgsInRow img1Src={SquareImg2} img2Src={SquareImg1}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          
         </CasePageLayout>
     )
 }
 
-export default BeyondGarden
+export default LouiesPlace
+

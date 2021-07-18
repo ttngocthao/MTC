@@ -1,28 +1,28 @@
 import React from 'react'
 import CasePageLayout from '../components/cases/CasePageLayout'
-import HeroImg from '../images/cases/garden/fullHero.png'
+import HeroImg from '../images/cases/painting/fullHero.png'
 
 import RectangleImgDisplay from '../components/cases/RectangleImgDisplay'
-import LogoFullWidthImg from '../images/cases/garden/fullLogo.png'
-import ColorPaletteImg from '../images/cases/garden/colourPalette.png'
+import LogoFullWidthImg from '../images/cases/painting/fullLogo.png'
+import VanDesignImg from '../images/cases/painting/vanDesign.png'
 import TwoImgsInRow from '../components/cases/TwoImgsInRow'
-import TShirtImg from '../images/cases/garden/tshirt.png'
-import BCardImg from '../images/cases/garden/bCard.png'
+import IconDesignImg from '../images/cases/painting/iconDesign.png'
+import LogoDesignImg from '../images/cases/painting/logoDesign.png'
 import FourImgsInRow from '../components/cases/FourImgsInRow'
-import Img1 from '../images/cases/garden/img1.png'
-import Img2 from '../images/cases/garden/img2.png'
-import Img3 from '../images/cases/garden/img3.png'
-import Img4 from '../images/cases/garden/img4.png'
+import Img1 from '../images/cases/painting/img1.png'
+import Img2 from '../images/cases/painting/img2.png'
+import Img3 from '../images/cases/painting/img3.png'
+import Img4 from '../images/cases/painting/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
 
 const BeyondGarden = () => {
     return (
         <CasePageLayout 
             heroImg={HeroImg} 
-            caseName='Above &#38; Beyond Garden' 
-            caseNameArr={['Above &','Beyond Garden']} 
+            caseName='Griffin Painting Services' 
+            caseNameArr={['Griffin','Painting Services']} 
             caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
-                
+            
             <CaseIntro
                 companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
                 briefTextArr={[
@@ -33,8 +33,8 @@ const BeyondGarden = () => {
             />
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
-            <TwoImgsInRow img1Src={TShirtImg} img2Src={BCardImg}/>
+            <RectangleImgDisplay imgSrc={VanDesignImg}/>
+            <TwoImgsInRow img1Src={LogoDesignImg} img2Src={IconDesignImg}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          
         </CasePageLayout>
