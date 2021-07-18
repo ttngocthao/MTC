@@ -27,11 +27,18 @@ const Wrap = styled.footer`
 `
 
 const StyledFooter = styled.div`
-    max-width:1640px;
+    /* max-width:1640px; */
     margin:0 auto;
     color: #222;
     text-align: right; 
     padding:2rem 1rem;
+    @media only screen and (min-width: 700px){
+       
+         padding:2rem 7.3%;
+       
+       
+         
+     }
    
 `
 const SocialMediaItem = styled.a`

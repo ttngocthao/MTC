@@ -29,56 +29,35 @@ const Container = styled.section`
             background-position:  center 70%;
     }
 `
-// const HomeTitleWrap = styled.div`
-//     max-width: 1920px;
-//     position: absolute;
-//     color: white;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     /* background-color: red; */
-//     width: 100%;
-//     h1{
-//         max-width: 230px;
-//         line-height: 1;
-//         margin: 0 auto;
-//         color:white;
-//         font-size: 4.3rem;
-//         font-weight:900;
-//         font-family: 'Barlow';
-//          @media only screen and (min-width: 1024px){
-//               max-width: 700px;
-              
-//          }
-//     }
-//     h2{
-//         max-width: 230px;
-//         margin: .5rem auto 0;
-//         color:#f43908;
-//         font-size:1rem;
-//         font-weight: 400;
-//         @media only screen and (min-width: 1024px){
-//               max-width: 700px;
-             
-//         }
+const TwoLineTitle = styled.h1`
+    line-height: 1;
+    text-transform: uppercase;
+    @media only screen and (min-width: 1024px){
+        font-size: 7rem!important;
+    }
+`
+// const CaseStudyHeroContainer = styled(Container)`
+//     display:none;
+//      @media only screen and (min-width: 1024px){
+//            display:block;
 //     }
 // `
-const Hero = ({heroSrc,pageTitle,noTopLayout}) => {
+// const CaseStudyHeroMobile = styled(CaseStudyHeroContainer)`
+//     display:block;
+//       @media only screen and (min-width: 1024px){
+//            display:none;
+//     }
+// `
+
+const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameArr}) => {
     if(!heroSrc){
         heroSrc = FullHomeHero;
     }
     const backgroundImageStyle = noTopLayout ? `url(${heroSrc})`: `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${heroSrc})`
-    return (
+    // if(!caseStudy){
+         return (
         <Container style={{backgroundImage:backgroundImageStyle}}>
-            {/* <HeroImgWrap>
-                <img src={HomeHeroImg} alt=''/>
-            </HeroImgWrap> */}
-            {/* {isHomePage && 
-                <HomeTitleWrap>
-                    <h1>LET’S BUILD<br/>YOUR CULTURE</h1>
-                    <h2>Ex id non ad consequat non anim excepteur adipisicing enim irure non.</h2>
-                </HomeTitleWrap>
-            } */}
+            
             {pageTitle==='home' && <TitleWrap>
                 <h1>LET’S BUILD<br/>YOUR CULTURE</h1>
                 <h2>Ex id non ad consequat non anim excepteur adipisicing enim irure non.</h2>
@@ -94,9 +73,23 @@ const Hero = ({heroSrc,pageTitle,noTopLayout}) => {
                     CULTURES FOR YOUR BUSINESS</h1> 
                 <h2>Adipisicing cillum elit reprehenderit cupidatat ex quis duis consequat.</h2>
                 </TitleWrap>}
+
+            {caseStudy && <TitleWrap>
+               {caseNameArr ? (<TwoLineTitle>{caseNameArr[0]}<br/>{caseNameArr[1]}</TwoLineTitle>) :  <h1>pageTitle</h1>}
+                <h2 style={{color:'white'}}>{caseDescription}</h2>
+                </TitleWrap>}
         </Container>
        
     )
+    // }else{
+    //     return(
+    //         <>
+    //             <CaseStudyHeroContainer style={{backgroundImage: `url(${heroSrc})`}}/>
+    //             <CaseStudyHeroMobile style={{backgroundImage:`url(${heroMobileSrc? heroMobileSrc : heroSrc})`}}/>
+    //         </>
+    //     )
+    // }
+   
 }
 
 export default Hero
