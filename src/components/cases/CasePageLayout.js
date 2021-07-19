@@ -37,7 +37,7 @@ export const RightCol = styled.div`
 `
 const CasePageLayout = ({children,caseName,heroImg,caseDescription,caseNameArr}) => {
     return (       
-        <Layout>
+        <Layout title={caseName}>
             <title>{caseName}</title>
             <Hero noTopLayout={true} pageTitle={caseName} heroSrc={heroImg} caseStudy={true} caseDescription={caseDescription} caseNameArr={caseNameArr}/>
             {children}

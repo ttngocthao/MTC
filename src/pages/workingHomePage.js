@@ -14,7 +14,7 @@ const WorkingHomePage = () => {
   // const { theme } = useThemeUI();
   // console.log('theme', theme)
   return (
-    <Layout>
+    <Layout title={'Home'}>
 
       <title>Home Page</title>
 

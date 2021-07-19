@@ -23,9 +23,12 @@ export const TextField = ({field,label,placeholder,unit,multiLines}) => {
 const FormWrap =styled.div`
     background-color: #222;
     min-width: 300px;
-    max-width: 450px;
+    
     width:100%;
     padding: 10px 0;
+    @media only screen and (min-width: 1024px){       
+        max-width: 450px;
+    }
     @media only screen and (min-width: 1200px){
         min-width: 750px;
         /* width: 100%;

@@ -11,58 +11,58 @@ import Case8Img from '../../images/cases/Layer9.png';
 import styled from 'styled-components';
 
 const caseStudyData = [
-    {
-        title: 'Case 1',
-        description: 'TITLE 1 GOES HERE TO DESCRIBE BUSINESS',
+    {   
+        title: 'Above & Beyond Garden',
+        description: 'above & beyond garden',
         bkgImg: Case1Img,
-        pageUrl: '#',
+        pageUrl: '/above-&-beyond-garden',
         orderInList: 0,
     },
     {
-        title: 'Case 2',
-        description: 'TITLE 2 GOES HERE TO DESCRIBE BUSINESS',
+        title: 'Griffin Painting Services',
+        description: 'Griffin Painting Services',
         bkgImg: Case2Img,
-        pageUrl: '#',
+        pageUrl: '/griffin-painting-services',
         orderInList: 1
     },
     {
-        title: 'Case 4',
-        description: 'TITLE 4 GOES HERE TO DESCRIBE BUSINESS',
+        title: 'Little Creek Farm',
+        description: 'Little Creek Farm',
         bkgImg: Case4Img,
-        pageUrl: '#',
+        pageUrl: '/little-creek-farm',
         orderInList: 2
     },
      {
-        title: 'Case 3',
-        description: 'TITLE 3 GOES HERE TO DESCRIBE BUSINESS',
+        title: "Louie's Place",
+        description: "Louie's Place",
         bkgImg: Case3Img,
-        pageUrl: '#',
+        pageUrl: '/louies-place',
         orderInList: 3
     },
     {
-        title: 'Case 5',
-        description: 'TITLE 5 GOES HERE TO DESCRIBE BUSINESS',
+        title: 'Kaiju Curry House',
+        description: 'Kaiju Curry House',
         bkgImg: Case5Img,
-        pageUrl: '#',
+        pageUrl: '/kaiju-curry-house',
         orderInList: 4
     },
     {
-        title: 'Case 6',
-        description: 'TITLE 6 GOES HERE TO DESCRIBE BUSINESS',
+        title: 'Itchy & Sketchy',
+        description: 'Itchy & Sketchy',
         bkgImg: Case6Img,
-        pageUrl: '#',
+        pageUrl: '/itchy-&-sketchy',
         orderInList: 5
     },
     {
-        title: 'Case 7',
-        description: 'TITLE 7 GOES HERE TO DESCRIBE BUSINESS',
+        title: 'Lemon Smart Business Card',
+        description: 'Lemon Smart Business Card',
         bkgImg: Case7Img,
-        pageUrl: '#',
+        pageUrl: '/lemon-smart-business-card',
         orderInList: 6
     },
     {
-        title: 'Case 8',
-        description: 'TITLE 8 GOES HERE TO DESCRIBE BUSINESS',
+        title: 'Salon 55',
+        description: 'Salon 55',
         bkgImg: Case8Img,
         pageUrl: '#',
         orderInList: 7
