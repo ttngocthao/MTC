@@ -1,5 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components'
+import BlackLogoImg from '../../images/blackMLogo.png'
+import RedLogoImg from '../../images/redMLogo.png' 
+import MenuBtnImg from '../../images/menuBtn.png'
+import CloseBtnImg from '../../images/closeBtn.png'
+
+
 const navItems =[
     {
         name:'home',
@@ -111,12 +117,12 @@ const navItems =[
         orderInMainList:null,
         orderInSubList:8,
         subNav:true
-    },
+    }
 ]
 const StyledHeader = styled.header`
     background-color: rgba(0,0,0,.4);
     color:white;
-    font-size: 40px;
+    font-size: 40px;    
     position: fixed;
     top:0;
     left:0;
@@ -125,7 +131,32 @@ const StyledHeader = styled.header`
 `
 const MobileNav = styled.nav`
     background-color: #f43908;
+    padding:1rem;
     display: block;
+    .logoWrap{
+        max-width: 53px;
+        /* max-width: 14.13%; */
+    }
+    .menuBtn{
+        max-width: 16px;
+        cursor: pointer;
+        /* max-width: 4.3%; */
+    }
+    .navBarActive_mobile{
+        display: flex;
+        align-items: center;
+        width: 57.5%;
+        margin-left: auto;
+        justify-content: space-between;
+        figure{
+            margin:0;
+            padding:0;
+            overflow: hidden;
+            img{
+                width:100%;
+            }
+        }
+    }
     @media only screen and (min-width: 700px){
         display: none;
     }
@@ -139,10 +170,25 @@ const DeskNav = styled.nav`
 `
 
 const Header = () => {
+    const [mobileMenuListOpened,setMobileMenuListOpened]= useState(true);
     return (
         <StyledHeader>
             <MobileNav>
-                This is for small screens
+                {mobileMenuListOpened ? <div>
+                    <div className='navBarActive_mobile'>
+                        <a href='/workingHomePage'>
+                            <figure className='logoWrap'>
+                                <img src={BlackLogoImg} alt=''/>
+                            </figure>  
+                        </a>
+                        <figure className='menuBtn'>
+                            <img src={MenuBtnImg} alt=''/>
+                        </figure>
+                    </div>
+                    <ul className='menuList_mobile'>
+                    {navItems.filter(item=>!item.subNav).map((item,index)=><li key={index}>{item.name}</li>)}
+                    </ul>
+                    </div> : <div className='navBar_mobile'>This is nav bar with red logo</div>}
             </MobileNav>
             <DeskNav>
                 This is for big screens
