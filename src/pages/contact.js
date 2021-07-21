@@ -12,7 +12,7 @@ import HeroImg from '../images/hero/fullContactHero.png';
 
 const ContactPage = () => {
     return (
-      <Layout>
+      <Layout title={"Contact"}>
 
         <title>Contact Page</title>
 

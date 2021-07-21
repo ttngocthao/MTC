@@ -36,10 +36,15 @@ export const RightCol = styled.div`
     }
 `
 const CasePageLayout = ({children,caseName,heroImg,caseDescription,caseNameArr}) => {
+    // useEffect(()=>{
+    //     if(window){
+    //         window.scrollTo(0,0);
+    //     }
+    // })
     return (       
-        <Layout>
+        <Layout title={caseName} caseStudy={true}>
             <title>{caseName}</title>
-            <Hero noTopLayout={true} pageTitle={caseName} heroSrc={heroImg} caseStudy={true} caseDescription={caseDescription} caseNameArr={caseNameArr}/>
+            <Hero pageTitle={caseName} heroSrc={heroImg} caseStudy={true} caseDescription={caseDescription} caseNameArr={caseNameArr}/>
             {children}
             <Contact/>
         </Layout>

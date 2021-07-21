@@ -62,7 +62,7 @@ const WorkingHomePage = () => {
   // const { theme } = useThemeUI();
   // console.log('theme', theme)
   return (
-    <Layout>
+    <Layout title={'About'}>
 
       <title>About Page</title>
 
@@ -84,7 +84,7 @@ const WorkingHomePage = () => {
            
           </StyledParagraph>         
       </PageIntro>
-      <Hero heroSrc={About1Img} noTopLayout={true}/>
+      <Hero heroSrc={About1Img} noTopLayout={true} minHeight='470'/>
       <PageIntro>
         <StyledParagraph>
           <PersonItem name='mike spiers' jobTitle='Creative Director' avatarUrl={MikeAvatar}>

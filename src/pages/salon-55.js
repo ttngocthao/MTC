@@ -1,26 +1,26 @@
 import React from 'react'
 import CasePageLayout from '../components/cases/CasePageLayout'
-import HeroImg from '../images/cases/lemon/fullHero.png'
+import HeroImg from '../images/cases/salon/fullHero.png'
 
 import RectangleImgDisplay from '../components/cases/RectangleImgDisplay'
-import LogoFullWidthImg from '../images/cases/lemon/fullLogo.png'
-import ColorPaletteImg from '../images/cases/lemon/colorPalette.png'
+import LogoFullWidthImg from '../images/cases/salon/fullLogo.png'
+import ProfilePageImg from '../images/cases/salon/profilePage.png'
 import TwoImgsInRow from '../components/cases/TwoImgsInRow'
-import SquareImg1 from '../images/cases/lemon/square1.png'
-import SquareImg2 from '../images/cases/lemon/square2.png'
+import SquareImg1 from '../images/cases/salon/square1.png'
+import SquareImg2 from '../images/cases/salon/square2.png'
 import FourImgsInRow from '../components/cases/FourImgsInRow'
-import Img1 from '../images/cases/lemon/img1.png'
-import Img2 from '../images/cases/lemon/img2.png'
-import Img3 from '../images/cases/lemon/img3.png'
-import Img4 from '../images/cases/lemon/img4.png'
+import Img1 from '../images/cases/salon/img1.png'
+import Img2 from '../images/cases/salon/img2.png'
+import Img3 from '../images/cases/salon/img3.png'
+import Img4 from '../images/cases/salon/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
 
-const LemonSmartBCard = () => {
+const Salon = () => {
     return (
-        <CasePageLayout 
+         <CasePageLayout 
             heroImg={HeroImg} 
-            caseName={'LEMON SMART BUSINESS CARD'} 
-            caseNameArr={['LEMON','SMART BUSINESS CARD']} 
+            caseName={'SALON 55'} 
+            caseNameArr={['SALON 55']} 
             caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
             
             <CaseIntro
@@ -31,9 +31,9 @@ const LemonSmartBCard = () => {
                 ]}
                 scopeNameArr={['BI','BS','MM']}
             />
-            
+            <RectangleImgDisplay imgSrc={ProfilePageImg}/>
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
+            
             <TwoImgsInRow img1Src={SquareImg1} img2Src={SquareImg2}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          
@@ -42,4 +42,4 @@ const LemonSmartBCard = () => {
     )
 }
 
-export default LemonSmartBCard
+export default Salon
