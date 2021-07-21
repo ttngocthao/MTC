@@ -15,7 +15,7 @@ const Layout = ({ title,caseStudy,children }) => {
         if(window){
             window.scrollTo(0,0);
         }
-    })
+    },[])
     return (
         <LayoutWrap>
             <Seo title={title}/>
