@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Seo from './Seo'
 import styled from 'styled-components'
 import Footer from './footer/Footer'
@@ -10,11 +10,16 @@ const LayoutWrap = styled.section`
 `
 
 
-const Layout = ({ title,children }) => {
+const Layout = ({ title,caseStudy,children }) => {
+    useEffect(()=>{
+        if(window){
+            window.scrollTo(0,0);
+        }
+    })
     return (
         <LayoutWrap>
             <Seo title={title}/>
-            <Header/>
+            <Header caseStudy={caseStudy}/>
             <main>
                 {children}
             </main>

@@ -1,17 +1,9 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import styled from 'styled-components'
-// import HomeHeroImg from '../../images/cases/hero_home.png';
 import FullHomeHero from '../../images/hero/fullHomeHero.png';
 import TitleWrap from '../pageTitle/PageTitle'
-// const HeroImgWrap = styled.figure`
-//     padding:0;
-//     margin:0 auto;
-//     max-width: 1920px;
-//     img{
-//         width:100%;
-//         vertical-align: bottom;
-//     }
-// `
+import  useScroll from '../../hooks/useScroll';
+
 const Container = styled.section`
     padding:0;
     margin:0 auto;
@@ -22,41 +14,66 @@ const Container = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     min-width:300px;
-    min-height:450px;
+    min-height:810px;
     width: 100%;  
+    
     @media only screen and (min-width: 1024px){
             min-height:470px;
-            background-position:  center 70%;
+            background-position:  center 70%;   
+            margin-top: 153px;  
+            &.caseStudy{
+                min-height: 694px;
+                margin:0;
+            }       
+            &.scrollingMarginTop{
+                margin-top:114px;
+               
+            }
+            
     }
+    
 `
 const TwoLineTitle = styled.h1`
-    line-height: 1;
+    /* line-height: 1; */
     text-transform: uppercase;
     @media only screen and (min-width: 1024px){
         font-size: 7rem!important;
     }
 `
-// const CaseStudyHeroContainer = styled(Container)`
-//     display:none;
-//      @media only screen and (min-width: 1024px){
-//            display:block;
-//     }
-// `
-// const CaseStudyHeroMobile = styled(CaseStudyHeroContainer)`
-//     display:block;
-//       @media only screen and (min-width: 1024px){
-//            display:none;
-//     }
-// `
 
-const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameArr}) => {
+
+const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameArr,minHeight}) => {
     if(!heroSrc){
         heroSrc = FullHomeHero;
     }
+    const [containerClassList,setContainerClassList]= useState([]);
+    const [isScrolling,setIsScrolling] = useState(false);
+    const scroll = useScroll();
+
+    useEffect(()=>{
+        const _classList =[];
+        
+        if(scroll.y > 153 && scroll.y - scroll.lastY >0){
+            _classList.push('scrollingMarginTop');
+            setIsScrolling(true);
+            setContainerClassList(_classList)
+        }
+        if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
+            setIsScrolling(false)
+            setContainerClassList([]);
+        }
+        // if(caseStudy){
+        //     _classList.push()
+        // }
+    },[scroll.y,scroll.lastY])
     const backgroundImageStyle = noTopLayout ? `url(${heroSrc})`: `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${heroSrc})`
-    // if(!caseStudy){
+    //className={!caseStudy && !minHeight && scrollDirection==='down' ? 'scrollingMarginTop' : 'not-scrollingMarginTop'}
+   
+   
          return (
-        <Container style={{backgroundImage:backgroundImageStyle}}>
+        <Container 
+            className={`${containerClassList.join(' ')} ${caseStudy ? 'caseStudy' : null}`} 
+            style={minHeight ? {backgroundImage:backgroundImageStyle,minHeight:`${minHeight}px`}: {backgroundImage:backgroundImageStyle}}>
             
             {pageTitle==='home' && <TitleWrap>
                 <h1>LET’S BUILD<br/>YOUR CULTURE</h1>
@@ -81,14 +98,7 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
         </Container>
        
     )
-    // }else{
-    //     return(
-    //         <>
-    //             <CaseStudyHeroContainer style={{backgroundImage: `url(${heroSrc})`}}/>
-    //             <CaseStudyHeroMobile style={{backgroundImage:`url(${heroMobileSrc? heroMobileSrc : heroSrc})`}}/>
-    //         </>
-    //     )
-    // }
+    
    
 }
 

@@ -17,7 +17,7 @@ const TitleWrap = styled.div`
       }
     h1{
         max-width: 220px;
-        line-height: 1;
+        /* line-height: 1; */
         margin: 0 ;
         color:white;
         font-size: 3rem;
