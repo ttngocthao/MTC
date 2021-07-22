@@ -11,7 +11,7 @@ const socialMediaData = [
     },
     {
         iconImg: InstagramIcon,
-        linkUrl: 'https://www.instagram.com/mightycultured/',
+        linkUrl: 'https://www.instagram.com/mightyculturedltd/',
         orderInList: 2
     },
     {
