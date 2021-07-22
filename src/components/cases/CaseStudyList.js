@@ -64,7 +64,7 @@ const caseStudyData = [
         title: 'Salon 55',
         description: 'Salon 55',
         bkgImg: Case8Img,
-        pageUrl: '#',
+        pageUrl: '/salon-55',
         orderInList: 7
     }
 
