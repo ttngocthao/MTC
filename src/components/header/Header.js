@@ -361,7 +361,7 @@ const Header = ({caseStudy}) => {
 
  
     const getActiveItemClassName =(item)=>{
-        const activeItemClassList = [];
+        const activeItemClassList = ['helloWorld'];
         // console.log('item',item);
         if(item.name!=='work' && currentPath && currentPath.pathname.slice(0,-1) === item.url){
             activeItemClassList.push('active')
@@ -369,6 +369,7 @@ const Header = ({caseStudy}) => {
         if(item.name==='work'&& currentPath && caseStudyPaths.indexOf(currentPath.pathname.slice(0,-1))>-1){
             activeItemClassList.push('active')
         }
+        console.log(item.name,activeItemClassList);
         return activeItemClassList.join(' ');
     }
     return (
