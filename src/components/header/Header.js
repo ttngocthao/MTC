@@ -319,15 +319,16 @@ const Header = ({caseStudy}) => {
     const [mobileMenuListOpened,setMobileMenuListOpened]= useState(false);
     const [isScrolling,setIsScrolling] = useState(false);
     const [showBkgCaseStudyNav,setShowBkgCaseStudyNav]=useState(false);
+    const [currentPath,setCurrentPath] = useState(null);
     const [showAboutSubNav,setShowAboutSubNav]=useState(false);
     const scroll = useScroll();
 
-    const currentPath = typeof window !== 'undefined' ? window.location : '';
+    // const currentPath = typeof window !== 'undefined' ? window.location : '';
     const caseStudyPaths = caseStudyData.map(item=>item.pageUrl);
 
     useEffect(()=>{
         let _classList =[];
-        
+        let pathName
         // if(scroll.y > 153 && scroll.y - scroll.lastY >0){
         //     _classList.push('scrollingNav');
         //     setIsScrolling(true)
@@ -335,7 +336,13 @@ const Header = ({caseStudy}) => {
         // if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
         //     setIsScrolling(false)
         // }
-
+        if(window){
+            pathName = window.location.pathname;
+            if(pathName.slice(-1)==='/'){
+                pathName = pathName.slice(0,-1);
+            }
+            setCurrentPath(pathName)
+        }
         if(scroll.y>50){
             _classList.push('scrollingNav');
             setIsScrolling(true);
@@ -343,13 +350,11 @@ const Header = ({caseStudy}) => {
             _classList=[];
             setIsScrolling(false);
         }
-        let pathName =currentPath.pathname
-        if(currentPath.pathname.slice(-1)==='/'){
-            pathName = currentPath.pathname.slice(0,-1);
-        }
+        
+        
         if(caseStudyPaths.indexOf(pathName)>-1){
         //    console.log(caseStudyPaths[caseStudyPaths.indexOf(currentPath.pathname)])
-            console.log('case study page',currentPath.pathname);
+            console.log('case study page',currentPath);
             if(scroll.y>600){
                 setShowBkgCaseStudyNav(true);
             }else{
@@ -363,10 +368,10 @@ const Header = ({caseStudy}) => {
     const getActiveItemClassName =(item)=>{
         const activeItemClassList = ['helloWorld'];
         // console.log('item',item);
-        if(item.name!=='work' && currentPath && currentPath.pathname.slice(0,-1) === item.url){
+        if(item.name!=='work' && currentPath && currentPath === item.url){
             activeItemClassList.push('active')
         }
-        if(item.name==='work'&& currentPath && caseStudyPaths.indexOf(currentPath.pathname.slice(0,-1))>-1){
+        if(item.name==='work'&& currentPath && caseStudyPaths.indexOf(currentPath)>-1){
             activeItemClassList.push('active')
         }
         console.log(item.name,activeItemClassList);
