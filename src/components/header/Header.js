@@ -7,6 +7,7 @@ import WhiteLogoImg from '../../images/whiteMLogo.png'
 import MenuBtnImg from '../../images/menuBtn.png'
 import CloseBtnImg from '../../images/closeBtn.png'
 import  useScroll  from '../../hooks/useScroll'
+import { caseStudyData } from '../cases/CaseStudyList' 
 
 const navItems =[
     {
@@ -136,8 +137,11 @@ const StyledHeader = styled.header`
      @media only screen and (min-width: 700px){
        &.caseStudyHeader{
            background-color: transparent;
+           &.showBkgColor{
+               background-color: rgba(34,34,34,1);
+           }
            /* &.isScrolling{
-               background-color: rgba(34,34,34,.75);
+               
            } */
        }
     }
@@ -281,8 +285,11 @@ const DeskNav = styled.nav`
 
 const Header = ({caseStudy}) => {
     const [mobileMenuListOpened,setMobileMenuListOpened]= useState(false);
-    const [isScrolling,setIsScrolling] = useState(false)
+    const [isScrolling,setIsScrolling] = useState(false);
+    const [showBkgCaseStudyNav,setShowBkgCaseStudyNav]=useState(false);
     const scroll = useScroll();
+    const currentPath = typeof window !== 'undefined' ? window.location : '';
+    const caseStudyPaths = caseStudyData.map(item=>item.pageUrl);
     useEffect(()=>{
         let _classList =[];
         
@@ -301,10 +308,22 @@ const Header = ({caseStudy}) => {
             _classList=[];
             setIsScrolling(false);
         }
+
+        if(caseStudyPaths.indexOf(currentPath.pathname)>-1){
+            console.log('case study page');
+            if(scroll.y>600){
+                setShowBkgCaseStudyNav(true);
+            }else{
+                setShowBkgCaseStudyNav(false);
+            }
+        }
+
     },[scroll.y,scroll.lastY]);
 
+    // console.log('current path', currentPath);
+
     return (
-        <StyledHeader className={`${caseStudy ? `caseStudyHeader`: null} ${isScrolling ? 'isScrolling':null}`} >
+        <StyledHeader className={`${caseStudy ? `caseStudyHeader`: null} ${showBkgCaseStudyNav ? 'showBkgColor' : null} ${isScrolling ? 'isScrolling':null}`} >
             <MobileNav style={mobileMenuListOpened ? {backgroundColor: '#f43908', minHeight: '810px'} : null}>
              
                     <div className={mobileMenuListOpened ? 'navBar_mobile--active' : 'navBar_mobile'}>

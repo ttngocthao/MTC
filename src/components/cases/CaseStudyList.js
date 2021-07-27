@@ -10,7 +10,7 @@ import Case7Img from '../../images/cases/Layer8.png';
 import Case8Img from '../../images/cases/Layer9.png';
 import styled from 'styled-components';
 
-const caseStudyData = [
+export const caseStudyData = [
     {   
         title: 'Above & Beyond Garden',
         description: 'Increasing the beauty of your home',
