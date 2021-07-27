@@ -359,7 +359,7 @@ const Header = ({caseStudy}) => {
     
     const getActiveItemClassName =(item)=>{
         const activeItemClassList = [];
-        if(currentPath.pathname.slice(0, -1) === item.url){
+        if(currentPath.pathname && currentPath.pathname.slice(0, -1) === item.url){
             activeItemClassList.push('active')
         }
         if(item.name==='work' && caseStudyPaths.indexOf(currentPath.pathname)>-1){
