@@ -1,8 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import FullHomeHero from '../../images/hero/fullHomeHero.png';
 import TitleWrap from '../pageTitle/PageTitle'
-import  useScroll from '../../hooks/useScroll';
 
 const Container = styled.section`
     padding:0;
@@ -46,31 +45,17 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
     if(!heroSrc){
         heroSrc = FullHomeHero;
     }
-    const [containerClassList,setContainerClassList]= useState([]);
-    const [isScrolling,setIsScrolling] = useState(false);
-    const scroll = useScroll();
+   
+    
 
-    // useEffect(()=>{
-    //     const _classList =[];
-        
-    //     // if(scroll.y > 153 && scroll.y - scroll.lastY >0){
-    //     //     _classList.push('scrollingMarginTop');
-    //     //     setIsScrolling(true);
-    //     //     setContainerClassList(_classList)
-    //     // }
-    //     // if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
-    //     //     setIsScrolling(false)
-    //     //     setContainerClassList([]);
-    //     // }
-        
-    // },[scroll.y,scroll.lastY])
+    
     const backgroundImageStyle = noTopLayout ? `url(${heroSrc})`: `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${heroSrc})`
-    //className={!caseStudy && !minHeight && scrollDirection==='down' ? 'scrollingMarginTop' : 'not-scrollingMarginTop'}
+   
    
    
          return (
         <Container 
-            className={`${containerClassList.join(' ')} ${caseStudy ? 'caseStudy' : null}`} 
+            className={`${caseStudy ? 'caseStudy' : null}`} 
             style={minHeight ? {backgroundImage:backgroundImageStyle,minHeight:`${minHeight}px`}: {backgroundImage:backgroundImageStyle}}>
             
             {pageTitle==='home' && <TitleWrap>

@@ -75,7 +75,7 @@ const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
     }
     return (
         <ItemWrap style={{ backgroundImage: `url(${bkgImg})`}} onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
-            <a href={pageUrl} target='_blank'>
+            <a href={pageUrl} target='_blank' rel="noreferrer">
                <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
            
                 {showDescription && 

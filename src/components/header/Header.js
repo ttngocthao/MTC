@@ -34,6 +34,22 @@ const navItems =[
         orderInSubList:null,
         subNav:false
     },
+    // {
+    //     name:'about',
+    //     url:'/about/#whoAreWe',
+    //     parent:'about',
+    //     orderInMainList:null,
+    //     orderInSubList:1,
+    //     subNav:true
+    // },
+    // {
+    //     name:'about',
+    //     url:'/about/#ourServices',
+    //     parent:'about',
+    //     orderInMainList:null,
+    //     orderInSubList:2,
+    //     subNav:true
+    // },
     {
         name:'contact',
         url:'/contact',
@@ -44,7 +60,7 @@ const navItems =[
     },
     {
         name:'who are we',
-        url:'/about/#who-are-we',
+        url:'/about/#whoAreWe',
         parent:'about',
         orderInMainList:null,
         orderInSubList:1,
@@ -52,7 +68,8 @@ const navItems =[
     },
     {
         name:'our services',
-        url:'/about/#our-services',
+        url:'/about/#ourServices',
+        parent:'about',
         orderInMainList:null,
         orderInSubList:2,
         subNav:true
@@ -283,13 +300,31 @@ const DeskNav = styled.nav`
     }
 `
 
+const AboutSubNavList = styled.ul`
+    position: absolute;
+    top:0;
+    left:0;
+    padding-left: 0;
+    background-color: white;
+    li{
+        color:black;
+        list-style: none;
+        font-size: 1.5rem;
+        font-weight:900;
+        text-transform: uppercase;
+    }
+`
+
 const Header = ({caseStudy}) => {
     const [mobileMenuListOpened,setMobileMenuListOpened]= useState(false);
     const [isScrolling,setIsScrolling] = useState(false);
     const [showBkgCaseStudyNav,setShowBkgCaseStudyNav]=useState(false);
+    const [showAboutSubNav,setShowAboutSubNav]=useState(false);
     const scroll = useScroll();
+
     const currentPath = typeof window !== 'undefined' ? window.location : '';
     const caseStudyPaths = caseStudyData.map(item=>item.pageUrl);
+
     useEffect(()=>{
         let _classList =[];
         
@@ -320,8 +355,18 @@ const Header = ({caseStudy}) => {
 
     },[scroll.y,scroll.lastY]);
 
-    // console.log('current path', currentPath);
-
+    console.log('current path', currentPath);
+    
+    const getActiveItemClassName =(item)=>{
+        const activeItemClassList = [];
+        if(currentPath.pathname.slice(0, -1) === item.url){
+            activeItemClassList.push('active')
+        }
+        if(item.name==='work' && caseStudyPaths.indexOf(currentPath.pathname)>-1){
+            activeItemClassList.push('active')
+        }
+        return activeItemClassList.join(' ');
+    }
     return (
         <StyledHeader className={`${caseStudy ? `caseStudyHeader`: null} ${showBkgCaseStudyNav ? 'showBkgColor' : null} ${isScrolling ? 'isScrolling':null}`} >
             <MobileNav style={mobileMenuListOpened ? {backgroundColor: '#f43908', minHeight: '810px'} : null}>
@@ -349,7 +394,7 @@ const Header = ({caseStudy}) => {
             <DeskNav >
                 <div className={ 'navBar_desktop'}>
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                        <a href={item.url}>{item.name}</a>
+                        <a className={`${getActiveItemClassName(item)}`} href={item.url} >{item.name}</a>
                         </li>)}
                         <a href='/workingHomePage'>                           
                             <figure className='logoWrap'>
@@ -357,12 +402,14 @@ const Header = ({caseStudy}) => {
                             </figure>  
                         </a>
                     {navItems.filter(item=>!item.subNav && item.orderInMainList>=3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                         <a href={item.url} className={item.name==='contact' ? 'contactBtn':''}>{item.name}</a>
-                    </li>  )} 
-                           
+                         <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)}`}>{item.name}</a>
+                    </li>  )}              
                       
                     </div>
             </DeskNav>
+            {showAboutSubNav && <AboutSubNavList> {navItems.filter(item=>item.parent==='about' && item.subNav).map(((item,index)=><li key={index}>
+                        {item.name}
+                        </li>))} </AboutSubNavList>}
         </StyledHeader>
     )
 }
