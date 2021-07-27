@@ -346,7 +346,7 @@ const Header = ({caseStudy}) => {
 
         if(caseStudyPaths.indexOf(currentPath.pathname)>-1){
         //    console.log(caseStudyPaths[caseStudyPaths.indexOf(currentPath.pathname)])
-            console.log('case study page');
+            console.log('case study page',currentPath.pathname);
             if(scroll.y>600){
                 setShowBkgCaseStudyNav(true);
             }else{
@@ -354,12 +354,12 @@ const Header = ({caseStudy}) => {
             }
         }
 
-    },[scroll.y,scroll.lastY]);
+    },[scroll.y]);
 
  
     const getActiveItemClassName =(item)=>{
         const activeItemClassList = [];
-        console.log('item',item);
+        // console.log('item',item);
         if(item.name!=='work' && currentPath && currentPath?.pathname.slice(0,-1) === item.url){
             activeItemClassList.push('active')
         }
