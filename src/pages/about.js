@@ -58,7 +58,7 @@ const StyledSubTitle = styled.h3`
            font-size:2.15rem;
          }
 `
-const WorkingHomePage = () => {
+const About = () => {
   // const { theme } = useThemeUI();
   // console.log('theme', theme)
   return (
@@ -114,4 +114,4 @@ const WorkingHomePage = () => {
   )
 }
 
-export default WorkingHomePage
+export default About

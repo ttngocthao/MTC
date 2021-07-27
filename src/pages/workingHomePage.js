@@ -10,7 +10,7 @@ import PageIntro from '../components/pageIntro/PageIntro';
 import HeroImg from '../images/hero/fullHomeHero.png';
 
 // markup
-const WorkingHomePage = () => {
+const HomePage = () => {
   // const { theme } = useThemeUI();
   // console.log('theme', theme)
   return (
@@ -32,4 +32,4 @@ const WorkingHomePage = () => {
   )
 }
 
-export default WorkingHomePage
+export default HomePage

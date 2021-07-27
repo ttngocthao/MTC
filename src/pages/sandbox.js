@@ -9,9 +9,9 @@ import { jsx, Box, useThemeUI } from 'theme-ui'
 
 
 // markup
-const IndexPage = () => {
-    const { theme } = useThemeUI();
-    console.log('theme', theme)
+const Sandbox = () => {
+    // const { theme } = useThemeUI();
+    // console.log('theme', theme)
     return (
         <main>
             <Helmet>
@@ -37,4 +37,4 @@ const IndexPage = () => {
     )
 }
 
-export default IndexPage
+export default Sandbox
