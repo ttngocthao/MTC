@@ -8,7 +8,7 @@ import Contact  from '../components/contact/Contact';
 import Hero from '../components/hero/Hero';
 
 
-import HeroImg from '../images/hero/fullContactHero.png';
+import HeroImg from '../images/contactHero.png';
 
 const ContactPage = () => {
     return (
@@ -16,9 +16,7 @@ const ContactPage = () => {
 
         <title>Contact Page</title>
 
-        <Hero heroSrc={HeroImg} pageTitle='contact'/>
-       
-       
+        <Hero heroSrc={HeroImg} noTopLayout={true} pageTitle='contact'/>      
 
         <Contact/>
 

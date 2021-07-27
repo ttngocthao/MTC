@@ -14,6 +14,8 @@ import {StyledTitle} from '../components/contact/Contact';
 import PersonItem from '../components/ourPeople/PersonItem';
 import ReviewList from '../components/customerReviews/ReviewList';
 import OurServices from '../components/ourServices/OurServices';
+import ServiceImages from '../components/ourServices/ServiceImages';
+
 import MikeAvatar from '../images/mike.png';
 import SanchoAvatar from '../images/sancho.png';
 // markup
@@ -58,6 +60,8 @@ const StyledSubTitle = styled.h3`
            font-size:2.15rem;
          }
 `
+
+
 const About = () => {
   // const { theme } = useThemeUI();
   // console.log('theme', theme)
@@ -108,6 +112,8 @@ const About = () => {
       </PageIntro>
       <ReviewList/>
       <OurServices/>
+      <ServiceImages/>
+
       <Contact/>
 
     </Layout>

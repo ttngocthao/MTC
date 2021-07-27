@@ -242,7 +242,7 @@ const DeskNav = styled.nav`
     .navBar_desktop{
        display: flex;
        /* justify-content: center; */
-       max-width: 670px;
+       max-width: 850px;
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
@@ -257,7 +257,8 @@ const DeskNav = styled.nav`
     
      .menuItem_desktop{
          list-style: none;
-        a{
+         position: relative;
+        a.mainItemLink{
             text-decoration: none;
             margin: 1rem auto;
             font-weight: 900;
@@ -302,16 +303,32 @@ const DeskNav = styled.nav`
 
 const AboutSubNavList = styled.ul`
     position: absolute;
-    top:0;
-    left:0;
-    padding-left: 0;
+    top: 4rem;
+    left: 1.5rem;
+    padding: 0;
+    margin: 0;
     background-color: white;
-    li{
-        color:black;
+    width: 175px;
+   
+    li{ 
         list-style: none;
+        padding:0;
+        a.subItemLink{
+        display: block; 
+        color:#222; 
         font-size: 1.5rem;
         font-weight:900;
-        text-transform: uppercase;
+        text-transform: uppercase; 
+        padding: .5rem 1rem;
+        margin:0;
+        background-color: transparent; 
+            &.subItemActive{
+                background-color: #F43908;
+            }
+        }
+        &:hover{
+             background-color: #F43908;
+        }
     }
 `
 
@@ -366,7 +383,7 @@ const Header = ({caseStudy}) => {
 
  
     const getActiveItemClassName =(item)=>{
-        const activeItemClassList = ['helloWorld'];
+        const activeItemClassList = [];
         // console.log('item',item);
         if(item.name!=='work' && currentPath && currentPath === item.url){
             activeItemClassList.push('active')
@@ -374,7 +391,7 @@ const Header = ({caseStudy}) => {
         if(item.name==='work'&& currentPath && caseStudyPaths.indexOf(currentPath)>-1){
             activeItemClassList.push('active')
         }
-        console.log(item.name,activeItemClassList);
+        // console.log(item.name,activeItemClassList);
         return activeItemClassList.join(' ');
     }
     return (
@@ -382,7 +399,7 @@ const Header = ({caseStudy}) => {
             <MobileNav style={mobileMenuListOpened ? {backgroundColor: '#f43908', minHeight: '810px'} : null}>
              
                     <div className={mobileMenuListOpened ? 'navBar_mobile--active' : 'navBar_mobile'}>
-                        <a href='/workingHomePage'>
+                        <a  href='/workingHomePage'>
                             <figure className='logoWrap'>
                                 <img src={mobileMenuListOpened ? BlackLogoImg : RedLogoImg} alt=''/>
                             </figure>  
@@ -404,22 +421,31 @@ const Header = ({caseStudy}) => {
             <DeskNav >
                 <div className={ 'navBar_desktop'}>
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                        <a className={`${getActiveItemClassName(item)}`} href={item.url} >{item.name}</a>
+                        <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>
                         </li>)}
                         <a href='/workingHomePage'>                           
                             <figure className='logoWrap'>
                                 <img src={!isScrolling ? (caseStudy? WhiteLogoImg :FullLogoImg) : RedLogoImg} alt=''/>
                             </figure>  
                         </a>
-                    {navItems.filter(item=>!item.subNav && item.orderInMainList>=3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                         <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)}`}>{item.name}</a>
-                    </li>  )}              
+                    {navItems.filter(item=>!item.subNav && item.orderInMainList>=3).map((item,index)=>{
+                        
+                    return(
+                        <li className='menuItem_desktop' key={index}>
+                            {item.name==='about' && showAboutSubNav && <AboutSubNavList>
+                                 {navItems.filter(subItem=>subItem.parent==='about' && subItem.subNav).map(((subItem,i)=><li key={i}>
+                                    <a className={`subItemLink`} href={subItem.url}>{subItem.name}</a>
+                                    </li>))}
+                                </AboutSubNavList>}
+                            <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} mainItemLink`}>{item.name}</a>
+                        </li>  
+                    )})}              
                       
                     </div>
             </DeskNav>
-            {showAboutSubNav && <AboutSubNavList> {navItems.filter(item=>item.parent==='about' && item.subNav).map(((item,index)=><li key={index}>
-                        {item.name}
-                        </li>))} </AboutSubNavList>}
+            {/* {showAboutSubNav && <AboutSubNavList> {navItems.filter(subItem=>subItem.parent==='about' && subItem.subNav).map(((subItem,i)=><li key={i}>
+                        {subItem.name}
+                        </li>))} </AboutSubNavList>} */}
         </StyledHeader>
     )
 }
