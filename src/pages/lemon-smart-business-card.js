@@ -21,15 +21,16 @@ const LemonSmartBCard = () => {
             heroImg={HeroImg} 
             caseName={'LEMON SMART BUSINESS CARD'} 
             caseNameArr={['LEMON','SMART BUSINESS CARD']} 
-            caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
+            caseDescription='One business card for life. The smart business card that gets you more contact from contactless.'>
             
             <CaseIntro
-                companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
+                companyTextArr={['Lemon are a technology company based in London. They specialise in smart business cards which utilise the contactless feature on mobile devices in order to pass information between people.']}
                 briefTextArr={[
-                    'Above & Beyond Gardens approached us during the initial stages of the business as they needed a logo that would show elegance and difference within the their industry. One key request during our briefing process was that we stayed away from greens, browns and more natural colours. It was important that the client had a brand that punched out from it’s competitors.',
-                    'For us that was pretty exciting, we jumped into looking at various colour palettes that gave a high end feel whilst still suiting the industry that they are situated in. In the end, purples, pinks and charcoal was chosen. These vibrant core colours of the purples reflected the wonder of an English summer, showcasing bursts of different flowers that give impact to an outdoor space, against more contemporary slate tones that help marry the core brand visuals.'
+                    'The team at Lemon presented their smart business card to us in the prototype stages and tasked us with designing a logo, along with various additional assets for them to use on their social platforms upon launch. They also required a simple website which customers could visit, in order to learn how the technology works and purchase their own personalised cards.',
+                    'Staying relevant to the brand name was a must, so a bright yellow colour palette was developed first for the client to review. Once this was finalised we moved on to the logo which had to tick two boxes; bold and modern. The pairing of a clear word mark and wedge icon helps ensure the brand is recognisable, even when used seperately. The website needed to be clean and easy to navigate so we developed a two page system which conveyed the brand colours and message effectively.',
+                    'https://lemonlink.co.uk'
                 ]}
-                scopeNameArr={['BI','BS','MM']}
+                scopeNameArr={['BA','WD','MM']}
             />
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>

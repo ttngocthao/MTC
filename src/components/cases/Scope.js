@@ -13,11 +13,14 @@ const ListItem = styled.li`
 const Scope = ({scopeNameArr}) => {
     const scopes =[   
     {name:'BI',displayName:'Brand Identity'},
+    {name:'BA',displayName:'Brand Assets'},
     {name:'BS',displayName:'Business Stationery'},
     {name:'BG',displayName:'Brand Guidelines'},
-    {name:'WD',displayName:'Website Development'},
+    {name:'WS',displayName:'Website'},
+    {name:'WD',displayName:'Website Design'},
     {name:'VP',displayName:'Video Production'},
-    {name:'MM',displayName:'Marketing Materials'}
+    {name:'MM',displayName:'Marketing Materials'},
+    {name:'Brand Digitilisation',displayName:'Brand Digitilisation'},
     ]
     
     return (

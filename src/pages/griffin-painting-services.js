@@ -21,13 +21,13 @@ const BeyondGarden = () => {
             heroImg={HeroImg} 
             caseName='Griffin Painting Services' 
             caseNameArr={['Griffin','Painting Services']} 
-            caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
+            caseDescription='Residential painting company with over 30 years experience.'>
             
             <CaseIntro
-                companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
+                companyTextArr={['Griffin Painting Services are a Berkshire based residential painting company with over 30 years experience. They offer a clean and professional service and pride themselves on completing the job on time and to budget.']}
                 briefTextArr={[
-                    'Above & Beyond Gardens approached us during the initial stages of the business as they needed a logo that would show elegance and difference within the their industry. One key request during our briefing process was that we stayed away from greens, browns and more natural colours. It was important that the client had a brand that punched out from it’s competitors.',
-                    'For us that was pretty exciting, we jumped into looking at various colour palettes that gave a high end feel whilst still suiting the industry that they are situated in. In the end, purples, pinks and charcoal was chosen. These vibrant core colours of the purples reflected the wonder of an English summer, showcasing bursts of different flowers that give impact to an outdoor space, against more contemporary slate tones that help marry the core brand visuals.'
+                    'The company was in the midst of a team shuffle. The owners son was stepping up to oversee operations and it was agreed with his dad (the previous owner) that the business should undergo a visual overhaul. The original logo that had been used for many years had become dated and tired. They needed an identity that would bring the business into the present day and offer a more contemporary feel.',
+                    'It was important to the guys that the logo felt as though it could be something you would find on a tin of paint, instantly recognisable and bold enough to be remembered. The name was already a great source imagery, which was a brilliant starting point for our creatives.'
                 ]}
                 scopeNameArr={['BI','BS','MM']}
             />

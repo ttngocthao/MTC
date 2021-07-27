@@ -21,13 +21,13 @@ const LouiesPlace = () => {
             heroImg={HeroImg} 
             caseName={'LOUIE’S PLACE'} 
             caseNameArr={['LOUIE’S PLACE']} 
-            caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
+            caseDescription='A place where pets can dream.'>
             
             <CaseIntro
-                companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
+                companyTextArr={[ 'Louie’s Place, a place where pets can dream, design and build bespoke pet beds. Working with their clients, they plan and discuss the needs of not just the owner, but the pets themselves. Louie’s Place build beautiful pieces of furniture that not only feel like part of the space, but gives your furry little friends the best place to sleep in the house.']}
                 briefTextArr={[
-                    'Above & Beyond Gardens approached us during the initial stages of the business as they needed a logo that would show elegance and difference within the their industry. One key request during our briefing process was that we stayed away from greens, browns and more natural colours. It was important that the client had a brand that punched out from it’s competitors.',
-                    'For us that was pretty exciting, we jumped into looking at various colour palettes that gave a high end feel whilst still suiting the industry that they are situated in. In the end, purples, pinks and charcoal was chosen. These vibrant core colours of the purples reflected the wonder of an English summer, showcasing bursts of different flowers that give impact to an outdoor space, against more contemporary slate tones that help marry the core brand visuals.'
+                    'When the guys at Louie’s Place approached us we jumped at the chance to build something great. The business idea is not only amazing but we had the opportunity to meet the owners dog, Louie the Cocker Spaniel. He was great inspiration for the brand and worked well for the down to earth cozy feel that the client wanted.',
+                    'The logo would be used for heated brand marks on the furniture, as well as their website and social media platforms. The client took the approach that pets are like peoples children, they care for them in the same way and wanted their brand to represent that more approachable appeal.'
                 ]}
                 scopeNameArr={['BI','BS','MM']}
             />

@@ -24,13 +24,13 @@ const LittleCreekFarm = () => {
             heroImg={HeroImg} 
             caseName='Little Creek Farm' 
             caseNameArr={['Little','Creek Farm']} 
-            caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
+            caseDescription='Farmed with love.'>
             
             <CaseIntro
-                companyTextArr={['Incididunt deserunt commodo ea culpa enim velit eiusmod tempor enim eiusmod dolor. Irure veniam ex non eu qui laborum enim esse aliqua ipsum. Aliqua labore anim ex quis proident qui duis eiusmod non. Duis ea consequat commodo deserunt consectetur elit occaecat Lorem ipsum eu nisi cupidatat laboris. Fugiat amet nisi non labore in labore nisi velit. Sunt ea non laboris sit exercitation mollit amet aliquip tempor.']}
+                companyTextArr={['The owners story began in 2011 when they purchased a 100 acre piece of paradise. With a passion for animals, namely chickens as well as sustainable farming practises Little Creek was born and so began their journey to being proud small business owners.']}
                 briefTextArr={[
-                    'Consequat irure culpa sunt id. Cupidatat labore officia sit ad nisi magna adipisicing amet adipisicing deserunt Lorem id eu laboris. Amet duis aliqua ad proident ea dolore voluptate Lorem. Esse fugiat irure commodo dolore esse aliqua ut qui dolore ea officia. Eu duis aliqua non voluptate exercitation consequat velit amet duis mollit incididunt non reprehenderit dolore. Occaecat dolore dolore enim aute ipsum commodo ea. Ea irure fugiat sit do labore velit laboris incididunt cillum.',
-                    'Esse tempor laboris sint adipisicing est aliquip commodo reprehenderit ad. Enim officia ad anim quis. Adipisicing officia labore laborum reprehenderit ex excepteur fugiat eiusmod minim.'
+                    'The newly formed farm business needed a contemporary yet down to earth logo that would set them apart from their competition. The brief was to keep it quite simple, using just black and white for the key brand assets that could easily be applied to multiple pieces of collateral.',
+                    'When it came to the egg carton labels themselves the client wanted to introduce some colour to differentiate between the various size of eggs.'
                 ]}
                 scopeNameArr={['BI','BS','MM']}
             />

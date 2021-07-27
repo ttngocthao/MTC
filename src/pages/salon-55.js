@@ -21,15 +21,16 @@ const Salon = () => {
             heroImg={HeroImg} 
             caseName={'SALON 55'} 
             caseNameArr={['SALON 55']} 
-            caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
+            caseDescription='a L’Oreal Professional salon with a fantastic artistic team.'>
             
             <CaseIntro
-                companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
+                companyTextArr={['Salon 55 is a L’Oreal Professional salon with a fantastic artistic team to suit any hairdressing needs. They stock L’Oreal and Paul Mitchell products. The team are a friendly 365 salon offering a wide range of services and late-night appointments.']}
                 briefTextArr={[
-                    'Above & Beyond Gardens approached us during the initial stages of the business as they needed a logo that would show elegance and difference within the their industry. One key request during our briefing process was that we stayed away from greens, browns and more natural colours. It was important that the client had a brand that punched out from it’s competitors.',
-                    'For us that was pretty exciting, we jumped into looking at various colour palettes that gave a high end feel whilst still suiting the industry that they are situated in. In the end, purples, pinks and charcoal was chosen. These vibrant core colours of the purples reflected the wonder of an English summer, showcasing bursts of different flowers that give impact to an outdoor space, against more contemporary slate tones that help marry the core brand visuals.'
+                    'The salon had exchanged hands with a new owner, and they approached us to develop a website that they could use to showcase their products, services and staff. Previously the salon had a very old un-useable site that was hard to navigate. A new booking system and clean aesthetic was created using the existing logo to bring the salon up to a more contemporary feel.',
+                    'We provided all of the back end creation, giving the team easy access to update price lists and staff profiles as needed.',
+                    'A new style kit was established to ensure brand consistency across all of the salons platforms. '
                 ]}
-                scopeNameArr={['BI','BS','MM']}
+                scopeNameArr={['WS','MM']}
             />
             <RectangleImgDisplay imgSrc={ProfilePageImg}/>
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>

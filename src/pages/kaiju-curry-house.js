@@ -21,13 +21,13 @@ const KaijuCurryHouse = () => {
             heroImg={HeroImg} 
             caseName='Kaiju Curry House' 
             caseNameArr={['Kaiju','Curry House']} 
-            caseDescription='Designing your outdoor space to fit your aesthetic and lifestyle.'>
+            caseDescription='Kaiju related discussion, a side of banter, washed down with recommendations.'>
             
             <CaseIntro
-                companyTextArr={['Above & Beyond Gardens specialise in helping their clients increase the beauty of their homes by designing elegant outdoor living spaces. They create beautiful garden designs by combining materials, colour, planting and lighting.']}
+                companyTextArr={['Kaiju Curry House is a UK based bi-weekly podcast series focusing on Kaiju fandom. Presented by three hosts, bringing you a main course of Kaiju related discussion, a side of banter, washed down with recommendations. Hardcore or casual, we welcome all to our curry house.']}
                 briefTextArr={[
-                    'Above & Beyond Gardens approached us during the initial stages of the business as they needed a logo that would show elegance and difference within the their industry. One key request during our briefing process was that we stayed away from greens, browns and more natural colours. It was important that the client had a brand that punched out from it’s competitors.',
-                    'For us that was pretty exciting, we jumped into looking at various colour palettes that gave a high end feel whilst still suiting the industry that they are situated in. In the end, purples, pinks and charcoal was chosen. These vibrant core colours of the purples reflected the wonder of an English summer, showcasing bursts of different flowers that give impact to an outdoor space, against more contemporary slate tones that help marry the core brand visuals.'
+                    'We were approached to create a new mascot for the podcast. The team already had an existing mascot that was not looking up to scratch. They wanted something inspired by the 80’s, which we included by using the colour gradient and aviators as a ‘cool’ touch. Once the mascot was visualised, the team asked us to look at locking it up with some typography.',
+                    'Initial concept sketches were produced using Procreate on the iPad Pro and finalised in Illustrator.'
                 ]}
                 scopeNameArr={['BI','BS','MM']}
             />
