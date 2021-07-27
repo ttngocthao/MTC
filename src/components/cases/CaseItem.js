@@ -24,14 +24,14 @@ const RedArrowRight = styled(RightArrowAlt)`
 
 `
 
-const ViewCaseButton = styled.a`
+const ViewCaseButton = styled.span`
     background-color: #222;
     color:white;
     padding:.25rem .5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 228px;
+    max-width: 245px;
     width: 100%;
     text-decoration: none;
     position: absolute;
@@ -75,15 +75,16 @@ const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
     }
     return (
         <ItemWrap style={{ backgroundImage: `url(${bkgImg})`}} onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
-            <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
+            <a href={pageUrl} target='_blank'>
+               <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
            
                 {showDescription && 
-                    <ViewCaseButton href={pageUrl} target='_blank' style={showDescription ? hoveredViewCaseBtnStyles : null}>
+                    <ViewCaseButton style={showDescription ? hoveredViewCaseBtnStyles : null}>
                         <h3 style={{ paddingRight: '1rem',marginBottom:0,fontWeight:400 }}>{title}</h3>
                         <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
                     </ViewCaseButton>
-                }
-            
+                }  
+            </a>           
         </ItemWrap>
     )
 }

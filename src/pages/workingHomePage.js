@@ -20,7 +20,9 @@ const WorkingHomePage = () => {
 
       <Hero pageTitle='home' heroSrc={HeroImg}/>
       <PageIntro>
-        <p> Ipsum pariatur ex esse consectetur Lorem do nulla anim. Et voluptate eu magna deserunt consectetur non proident ad veniam consectetur minim laboris proident. Voluptate aute qui eu tempor minim Lorem aute. Occaecat ex consectetur et enim reprehenderit officia dolor amet. Labore eu nulla aliqua fugiat incididunt ut sint exercitation.</p>
+        <p> How does my brand define itself from the competition? Can we build consistency across our assets? Is there a way we can take our brand culture to the next level? It’s questions like this that the team at Mighty Cultured love to solve. We collaborate with each of our clients to ensure individual requirements are met, offering longevity for each project we work on. We believe brand builds culture, we believe it forms unity and creates impact, and that’s what we want to continue for you.</p>
+        <p>
+        We are a design studio working with businesses that enjoy the benefits of change, that out-think the competition and see the potential in strong brand presence.</p>
       </PageIntro>
       <CaseStudyList />
 

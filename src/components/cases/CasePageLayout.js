@@ -44,7 +44,7 @@ const CasePageLayout = ({children,caseName,heroImg,caseDescription,caseNameArr})
     return (       
         <Layout title={caseName} caseStudy={true}>
             <title>{caseName}</title>
-            <Hero pageTitle={caseName} heroSrc={heroImg} caseStudy={true} caseDescription={caseDescription} caseNameArr={caseNameArr}/>
+            <Hero noTopLayout={true} pageTitle={caseName} heroSrc={heroImg} caseStudy={true} caseDescription={caseDescription} caseNameArr={caseNameArr}/>
             {children}
             <Contact/>
         </Layout>

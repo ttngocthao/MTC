@@ -284,14 +284,22 @@ const Header = ({caseStudy}) => {
     const [isScrolling,setIsScrolling] = useState(false)
     const scroll = useScroll();
     useEffect(()=>{
-        const _classList =[];
+        let _classList =[];
         
-        if(scroll.y > 153 && scroll.y - scroll.lastY >0){
+        // if(scroll.y > 153 && scroll.y - scroll.lastY >0){
+        //     _classList.push('scrollingNav');
+        //     setIsScrolling(true)
+        // }
+        // if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
+        //     setIsScrolling(false)
+        // }
+
+        if(scroll.y>50){
             _classList.push('scrollingNav');
-            setIsScrolling(true)
-        }
-        if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
-            setIsScrolling(false)
+            setIsScrolling(true);
+        }else{
+            _classList=[];
+            setIsScrolling(false);
         }
     },[scroll.y,scroll.lastY]);
 

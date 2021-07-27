@@ -9,6 +9,7 @@ export const StyledReviewItem = styled.div`
     @media only screen and (min-width: 920px){
         max-width:398px;
         margin: 1rem 0;
+        min-height: 394px;
         &:nth-child(2){
             margin-left: 1rem;
             margin-right: 1rem;

@@ -30,7 +30,7 @@ export const StyledTitle = styled.h2`
     max-width: 200px;
     text-transform: uppercase;
       @media only screen and (min-width: 700px){
-          max-width:450px;
+          max-width:700px;
          font-size: 4.3rem;
       }
 `
@@ -42,9 +42,15 @@ const Contact = () => {
             <StyledContainer>                
                 <div style={{paddingRight:'2%'}}>
                     <StyledTitle>
-                    LET’S BUILD YOUR CULTURE
+                    NOW IS THE TIME TO
+                    BUILD SOMETHING GREAT
                     </StyledTitle>             
-                    <p style={{maxWidth:'675px',paddingRight:'1rem'}}  sx={theme.styles.whiteText}>Veniam incididunt magna sunt esse. Qui commodo anim ad incididunt ipsum quis consequat velit est aliqua in. Sunt culpa minim nostrud culpa ipsum duis aute ad labore incididunt fugiat. Qui eiusmod quis enim ullamco nulla aliquip tempor dolore veniam non anim deserunt amet. Sunt excepteur aliqua commodo aliqua ad esse fugiat.</p>
+                    <div style={{maxWidth:'675px',paddingRight:'1rem'}}  sx={theme.styles.whiteText}>
+                        <p>We work with businesses of all shapes and sizes and would love to hear from you regarding your next design project.
+                        </p>
+                        <p>Our team of experienced creatives are ready and waiting to help you through the process. If you have 2 seconds to fill out the form to the right, you’re already more awesome than we suspected.</p>
+                    </div>
+
                 </div>               
                 <ContactForm/>
             </StyledContainer>

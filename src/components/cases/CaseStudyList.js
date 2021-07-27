@@ -13,56 +13,56 @@ import styled from 'styled-components';
 const caseStudyData = [
     {   
         title: 'Above & Beyond Garden',
-        description: 'above & beyond garden',
+        description: 'Increasing the beauty of your home',
         bkgImg: Case1Img,
         pageUrl: '/above-&-beyond-garden',
         orderInList: 0,
     },
     {
         title: 'Griffin Painting Services',
-        description: 'Griffin Painting Services',
+        description: 'BRINGING THE BUSINESS INTO THE PRESENT',
         bkgImg: Case2Img,
         pageUrl: '/griffin-painting-services',
         orderInList: 1
     },
     {
         title: 'Little Creek Farm',
-        description: 'Little Creek Farm',
+        description: 'FARMED WITH LOVE',
         bkgImg: Case4Img,
         pageUrl: '/little-creek-farm',
         orderInList: 2
     },
      {
         title: "Louie's Place",
-        description: "Louie's Place",
+        description: "A PLACE WHERE PETS CAN DREAM",
         bkgImg: Case3Img,
         pageUrl: '/louies-place',
         orderInList: 3
     },
     {
         title: 'Kaiju Curry House',
-        description: 'Kaiju Curry House',
+        description: 'KAIJU RELATED DISCUSSION, AND A SIDE OF BANTER',
         bkgImg: Case5Img,
         pageUrl: '/kaiju-curry-house',
         orderInList: 4
     },
     {
         title: 'Itchy & Sketchy',
-        description: 'Itchy & Sketchy',
+        description: 'ONE OF A KIND CALLIGRAPHY GIFTS',
         bkgImg: Case6Img,
         pageUrl: '/itchy-&-sketchy',
         orderInList: 5
     },
     {
-        title: 'Lemon Smart Business Card',
-        description: 'Lemon Smart Business Card',
+        title: 'Lemon',
+        description: 'SMART BUSINESS CARDS',
         bkgImg: Case7Img,
         pageUrl: '/lemon-smart-business-card',
         orderInList: 6
     },
     {
         title: 'Salon 55',
-        description: 'Salon 55',
+        description: 'a L’Oreal Professional salon',
         bkgImg: Case8Img,
         pageUrl: '/salon-55',
         orderInList: 7

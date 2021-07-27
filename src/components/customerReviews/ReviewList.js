@@ -27,17 +27,17 @@ const reviewData =[
     {
         name:'Simon Cousins',
         brand:'Above & Beyond Gardens',
-        msg:'Enim labore ut occaecat occaecat enim pariatur laboris consequat id adipisicing. Anim ea minim cupidatat aliqua non. Nulla anim consequat esse eiusmod amet exercitation adipisicing nulla magna cillum Lorem duis commodo. Eu nulla esse ad magna reprehenderit amet ullamco eiusmod Lorem ut quis enim.'
+        msg:'“So happy with the service and help with my company logo and branding. The team at Mighty Cultured created the perfect design for me and was very helpful through the process. Will be using again in the future and would highly recommend!!!”'
     },
      {
-        name:'Simon Cousins',
-        brand:'Above & Beyond Gardens',
-        msg:'Enim labore ut occaecat occaecat enim pariatur laboris consequat id adipisicing. Anim ea minim cupidatat aliqua non. Nulla anim consequat esse eiusmod amet exercitation adipisicing nulla magna cillum Lorem duis commodo. Eu nulla esse ad magna reprehenderit amet ullamco eiusmod Lorem ut quis enim.'
+        name:'Kloe Dean',
+        brand:'KloeD-1',
+        msg:'“Outstanding service. The logo and graphics created for my business captured my brand exactly as I wished. In turn I have had an uptake of clients 2 fold to my previous intake. The process was stress free and efficient. I’m so happy with the design, communication throughout and overall service. Thank you so much!!”'
     },
      {
-        name:'Simon Cousins',
-        brand:'Above & Beyond Gardens',
-        msg:'Enim labore ut occaecat occaecat enim pariatur laboris consequat id adipisicing. Anim ea minim cupidatat aliqua non. Nulla anim consequat esse eiusmod amet exercitation adipisicing nulla magna cillum Lorem duis commodo. Eu nulla esse ad magna reprehenderit amet ullamco eiusmod Lorem ut quis enim.'
+        name:'Dave Moczulski',
+        brand:'Woofy',
+        msg:'“I found Mighty Cultured by seeing some of their work online with various brands I follow. I needed logos for 2 products and inquired. The professionalism and attention to detail is top notch. They were able to put the ideas in my head into a brilliant logo, even for an industry they know nothing about. I will continue to work with them for all future projects”.'
     }
 ]
 const ReviewList = () => {

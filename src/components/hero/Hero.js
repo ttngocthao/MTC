@@ -50,22 +50,20 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
     const [isScrolling,setIsScrolling] = useState(false);
     const scroll = useScroll();
 
-    useEffect(()=>{
-        const _classList =[];
+    // useEffect(()=>{
+    //     const _classList =[];
         
-        if(scroll.y > 153 && scroll.y - scroll.lastY >0){
-            _classList.push('scrollingMarginTop');
-            setIsScrolling(true);
-            setContainerClassList(_classList)
-        }
-        if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
-            setIsScrolling(false)
-            setContainerClassList([]);
-        }
-        // if(caseStudy){
-        //     _classList.push()
-        // }
-    },[scroll.y,scroll.lastY])
+    //     // if(scroll.y > 153 && scroll.y - scroll.lastY >0){
+    //     //     _classList.push('scrollingMarginTop');
+    //     //     setIsScrolling(true);
+    //     //     setContainerClassList(_classList)
+    //     // }
+    //     // if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
+    //     //     setIsScrolling(false)
+    //     //     setContainerClassList([]);
+    //     // }
+        
+    // },[scroll.y,scroll.lastY])
     const backgroundImageStyle = noTopLayout ? `url(${heroSrc})`: `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${heroSrc})`
     //className={!caseStudy && !minHeight && scrollDirection==='down' ? 'scrollingMarginTop' : 'not-scrollingMarginTop'}
    
@@ -77,18 +75,18 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
             
             {pageTitle==='home' && <TitleWrap>
                 <h1>LET’S BUILD<br/>YOUR CULTURE</h1>
-                <h2>Ex id non ad consequat non anim excepteur adipisicing enim irure non.</h2>
+                <h2>Purposeful design creates longevity and wins the hearts of many.</h2>
            </TitleWrap>}
            
             {pageTitle==='contact' && <TitleWrap contactTitle={true}>
-                <h1>GET IN TOUCH</h1>
-                <h2>Ullamco amet magna ea cupidatat nulla.</h2>
+                <h1>GET IN TOUCH</h1>           
+                <h2>We’d love to hear from you.</h2>
            </TitleWrap>}
 
             {pageTitle==='about' && <TitleWrap>
                 <h1>WE BUILD DESIGN LED<br/>
                     CULTURES FOR YOUR BUSINESS</h1> 
-                <h2>Adipisicing cillum elit reprehenderit cupidatat ex quis duis consequat.</h2>
+                <h2>Enjoy the benefits of change, disruption and ownership.     </h2>
                 </TitleWrap>}
 
             {caseStudy && <TitleWrap>
