@@ -29,13 +29,12 @@ export const StyledInitial = styled.div`
    border-radius: 50%;
    overflow: hidden;
 `
-export const StyledLogo = styled.figure`
+const StyledLogo = styled.figure`
     margin:0;
     width: 5rem;
     img{
         width:100%;
     }
-
 `
 const StyledName = styled.h2`
     font-weight:600;
