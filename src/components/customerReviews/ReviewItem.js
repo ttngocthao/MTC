@@ -29,6 +29,14 @@ export const StyledInitial = styled.div`
    border-radius: 50%;
    overflow: hidden;
 `
+export const StyledLogo = styled.figure`
+    margin:0;
+    width: 5rem;
+    img{
+        width:100%;
+    }
+
+`
 const StyledName = styled.h2`
     font-weight:600;
      font-size:2.15rem;
@@ -40,10 +48,10 @@ const StyledRole = styled.h3`
     font-weight:600;
     font-size:1.2rem;
 `
-const ReviewItem = ({name,brand,msg}) => {
+const ReviewItem = ({name,brand,msg,logo}) => {
     return (
         <StyledReviewItem>
-            <StyledInitial/>
+           {logo ? <StyledLogo><img src={logo} alt=''/></StyledLogo> : <StyledInitial/>}
             <StyledName>{name}</StyledName>
             <StyledRole>{brand}</StyledRole>
             <p>{msg}</p>
