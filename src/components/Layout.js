@@ -26,20 +26,22 @@ const GifImgFigure = styled.figure`
     top:50%;
     transform: translate(-50%,-50%);
     width:100%;
-    max-width:510px;
+    max-width:110px;
     img{
         width:100%;
     }
 `
 
 const Layout = ({ title,caseStudy,children }) => {
-    const [showGif,setShowGif] = useState(true);
+    const [showGif,setShowGif] = useState(false);
     const [hash,setHash]= useState(null)
     useEffect(()=>{
         if(window){
             window.scrollTo(0,0);
-            setHash(window.location.hash)    
+            setHash(window.location.hash) 
+               
             if(title==='Home' && window.location.hash===''){
+                setShowGif(true);
                 setTimeout(()=>{
                     setShowGif(false);
                 },4000)
