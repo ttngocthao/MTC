@@ -37,17 +37,18 @@ const Layout = ({ title,caseStudy,children }) => {
     const [hash,setHash]= useState(null)
     useEffect(()=>{
         if(window){
-            // window.scrollTo(0,0);
-            setHash(window.location.hash)            
+            window.scrollTo(0,0);
+            setHash(window.location.hash)    
+            if(title==='Home' && window.location.hash===''){
+                setTimeout(()=>{
+                    setShowGif(false);
+                },4000)
+            }        
         }
-        if(title==='Home'){
-            setTimeout(()=>{
-                setShowGif(false);
-            },4000)
-        }
+        
     },[])
 
-    if(showGif && title==='Home' && hash!=='#caseStudy'){
+    if(showGif && title==='Home' && hash===''){
         return(
             <GifImgContainer>
                 <GifImgFigure> 

@@ -49,9 +49,9 @@ const TitleWrap = styled.div`
 `
 
 const ContactTitleWrap = styled(TitleWrap)`
-    @media only screen and (min-width: 1200px){
+    /* @media only screen and (min-width: 1200px){
           padding-left: 1rem;
-      }
+      } */
     h1{
         max-width: 200px;
         margin: 0;
@@ -63,8 +63,9 @@ const ContactTitleWrap = styled(TitleWrap)`
         @media only screen and (min-width: 700px){
             /* padding:0 4rem;
              max-width: 1920px; */
-              max-width: 1640px;
+              /* max-width: 1640px; */
               margin: 0 auto ;
+              padding:0 7.3%;
         }
     }
     h2{
@@ -72,8 +73,9 @@ const ContactTitleWrap = styled(TitleWrap)`
        
         @media only screen and (min-width: 700px){
             /* padding:0 4rem; */
-             max-width: 1640px;
-             margin: 0 auto ;
+             /* max-width: 1640px; */
+             padding: 0 7.3% ;
+             margin:0 auto
         }
     }
    

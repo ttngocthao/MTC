@@ -382,11 +382,7 @@ const Header = ({caseStudy}) => {
         return activeItemClassList.join(' ');
     }
 
-   const testingFunc =()=>{
-       if(window){
-           console.log('testingFunc',window.location)
-       }
-   }
+   
 
     const toggleAboutSubNavState =()=>{
         setShowAboutSubNav(!showAboutSubNav)
@@ -409,8 +405,8 @@ const Header = ({caseStudy}) => {
                       
                     </div>
                     {mobileMenuListOpened && <ul className='menuList_mobile'>
-                    {navItems.filter(item=>!item.subNav).map((item,index)=><li className='menuItem_mobile' key={index}>
-                        <a href={item.url}>{item.name}</a>
+                    {navItems.filter(item=>!item.subNav).map((item,index)=><li onClick={()=>setMobileMenuListOpened(false)} className='menuItem_mobile' key={index}>
+                        <a href={item.url} >{item.name}</a>
                         </li>)}
                     </ul>}
                     
@@ -420,7 +416,7 @@ const Header = ({caseStudy}) => {
                 <div className={ 'navBar_desktop'}>
                    
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} onAnchorLinkClick={testingFunc}/>: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
+                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} />: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
                         </li>)}
                         <a href='/workingHomePage'>                           
                             <figure className='logoWrap'>
@@ -433,7 +429,7 @@ const Header = ({caseStudy}) => {
                         <li className={`menuItem_desktop`} key={index} onMouseEnter={item.name==='about'? toggleAboutSubNavState : null} onMouseLeave={item.name==='about' ? toggleAboutSubNavState : null}>
                             {item.name==='about' && showAboutSubNav && <AboutSubNavList>
                                  {navItems.filter(subItem=>subItem.parent==='about' && subItem.subNav).map(((subItem,i)=><li key={i}>
-                                     <AnchorLink className={`subItemLink`} title={subItem.name} to={subItem.url} onAnchorLinkClick={()=>{setShowAboutSubNav(false);testingFunc()}}/>
+                                     <AnchorLink className={`subItemLink`} title={subItem.name} to={subItem.url} onAnchorLinkClick={()=>{setShowAboutSubNav(false)}}/>
                                     </li>))}
                                 </AboutSubNavList>}
                             <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} ${item.name==='about' && showAboutSubNav ? 'active' : null} mainItemLink`}>{item.name}</a>
