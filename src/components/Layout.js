@@ -33,19 +33,37 @@ const GifImgFigure = styled.figure`
 `
 
 const Layout = ({ title,caseStudy,children }) => {
-    const [showGif,setShowGif] = useState(false);
+    const [showGif,setShowGif] = useState(true);
     const [hash,setHash]= useState(null)
     useEffect(()=>{
         if(window){
             window.scrollTo(0,0);
             setHash(window.location.hash) 
+            window.onbeforeunload = ()=>{
+                window.sessionStorage.setItem('origin',window.location.href)
+            }
+           
+           
+                if(window.location.href===window.sessionStorage.getItem('origin')){
+                     sessionStorage.removeItem('firstLoadDone')
+                }
+           
+           
+           
+
+            if(window.sessionStorage.getItem('firstLoadDone')===null){
+                if(title==='Home' && window.location.hash===''){
+                    setShowGif(true);
+                    setTimeout(()=>{
+                        setShowGif(false);
+                    },4000)
+                }   
+                window.sessionStorage.setItem('firstLoadDone',1) 
+             }  else{
+                 
+                 setShowGif(false);
+             }
                
-            if(title==='Home' && window.location.hash===''){
-                setShowGif(true);
-                setTimeout(()=>{
-                    setShowGif(false);
-                },4000)
-            }        
         }
         
     },[])
