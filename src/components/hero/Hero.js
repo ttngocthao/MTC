@@ -19,7 +19,10 @@ const Container = styled.section`
     @media only screen and (min-width: 1024px){
             min-height:470px;
             background-position:  center 70%;   
-            margin-top: 153px;  
+            margin-top: 153px; 
+            &.addMarginBottom{
+                margin-bottom: 3rem;
+            }
             &.caseStudy{
                 min-height: 694px;
                 margin:0;
@@ -55,8 +58,8 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
    
          return (
         <Container 
-            className={`${caseStudy ? 'caseStudy' : null}`} 
-            style={minHeight ? {backgroundImage:backgroundImageStyle,minHeight:`${minHeight}px`}: {backgroundImage:backgroundImageStyle}}>
+            className={`${caseStudy ? 'caseStudy' : null} ${pageTitle==='about' ? 'addMarginBottom': null}`} 
+            style={minHeight ? {backgroundImage:backgroundImageStyle,minHeight:`${minHeight}px`,marginTop:0}: {backgroundImage:backgroundImageStyle}}>
             
             {pageTitle==='home' && <TitleWrap>
                 <h1>LET’S BUILD<br/>YOUR CULTURE</h1>

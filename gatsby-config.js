@@ -7,6 +7,13 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -150,
+        duration:2000
+      }
+    },
+    {
       resolve: `gatsby-plugin-theme-ui`,
       options: {
         preset: "@theme-ui/preset-funk",

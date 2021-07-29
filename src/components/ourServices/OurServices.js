@@ -52,9 +52,9 @@ const servicesData =[
     }
 ]
 
-const OurServices = () => {
+const OurServices = ({id}) => {
     return (
-        <StyledContainer>
+        <StyledContainer id={id}>
             <StyledListWrap style={{display:'block'}}>
                 <StyledName style={{marginBottom:'1.5rem'}}>OUR SERVICES</StyledName>
                 <div>

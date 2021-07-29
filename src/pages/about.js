@@ -29,6 +29,7 @@ const StyledParagraph = styled.div`
    @media only screen and (min-width: 741px){
      flex-direction: row;
      justify-content: space-between;
+    
    }
    .leftCol{
      padding-bottom: 1rem;
@@ -71,7 +72,7 @@ const About = () => {
       <title>About Page</title>
 
       <Hero pageTitle='about' heroSrc={HeroImg}/>
-      <PageIntro>
+      <PageIntro id='whoAreWe'>
           <StyledParagraph> 
             <div  className='leftCol'>
                <StyledTitle style={{color:'black',maxWidth:'540px'}}>
@@ -88,7 +89,6 @@ const About = () => {
                 </p>
                 <p>
                 We are a team of experienced creatives with multiple skills within the industry, allowing us to offer the best fit for your needs.  </p>
-             
             </div>
            
           </StyledParagraph>         
@@ -111,7 +111,7 @@ const About = () => {
         </StyledParagraph>       
       </PageIntro>
       <ReviewList/>
-      <OurServices/>
+      <OurServices id='ourServices'/>
       <ServiceImages/>
 
       <Contact/>

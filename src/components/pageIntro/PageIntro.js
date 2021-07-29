@@ -11,9 +11,9 @@ const IntroWrap = styled.div`
    }
 `
 
-const PageIntro = ({children}) => {
+const PageIntro = ({id,children}) => {
     return (
-        <IntroWrap>
+        <IntroWrap id={id ? id : null}>
            {children}
         </IntroWrap>
     )

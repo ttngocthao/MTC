@@ -81,9 +81,9 @@ const UlList = styled.ul`
         
     }
 `
-const CaseStudyList = () => {
+const CaseStudyList = ({id}) => {
     return (
-        <UlList>
+        <UlList id={id}>
             {caseStudyData.map(item =>
                 <CaseItem
                     key={item.title}

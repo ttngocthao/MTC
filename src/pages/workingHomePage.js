@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout,{useEffect,useState} from '../components/Layout';
 import 'semantic-ui-css/semantic.min.css';
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
@@ -9,10 +9,12 @@ import PageIntro from '../components/pageIntro/PageIntro';
 
 import HeroImg from '../images/hero/fullHomeHero.png';
 
+
 // markup
 const HomePage = () => {
   // const { theme } = useThemeUI();
   // console.log('theme', theme)
+  
   return (
     <Layout title={'Home'}>
 
@@ -24,7 +26,10 @@ const HomePage = () => {
         <p>
         We are a design studio working with businesses that enjoy the benefits of change, that out-think the competition and see the potential in strong brand presence.</p>
       </PageIntro>
-      <CaseStudyList />
+      {/* {!pageLoaded && <PageIntro>
+        <img src={GifImg} alt=''/>
+      </PageIntro>} */}
+      <CaseStudyList id='caseStudy'/>
 
       <Contact/>
 

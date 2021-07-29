@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import styled from 'styled-components'
 import FullLogoImg from '../../images/FullLogo.png'
 import BlackLogoImg from '../../images/blackMLogo.png'
@@ -20,7 +21,7 @@ const navItems =[
     },
     {
         name:'work',
-        url:'/workingHomePage/#caseStudy',
+        url:'/workingHomePage#caseStudy',
         parent:null,
         orderInMainList:2,
         orderInSubList:null,
@@ -60,7 +61,7 @@ const navItems =[
     },
     {
         name:'who are we',
-        url:'/about/#whoAreWe',
+        url:'/about#whoAreWe',
         parent:'about',
         orderInMainList:null,
         orderInSubList:1,
@@ -68,7 +69,7 @@ const navItems =[
     },
     {
         name:'our services',
-        url:'/about/#ourServices',
+        url:'/about#ourServices',
         parent:'about',
         orderInMainList:null,
         orderInSubList:2,
@@ -346,13 +347,7 @@ const Header = ({caseStudy}) => {
     useEffect(()=>{
         let _classList =[];
         let pathName
-        // if(scroll.y > 153 && scroll.y - scroll.lastY >0){
-        //     _classList.push('scrollingNav');
-        //     setIsScrolling(true)
-        // }
-        // if(scroll.y >= 153 && scroll.y - scroll.lastY <= 0){
-        //     setIsScrolling(false)
-        // }
+       
         if(window){
             pathName = window.location.pathname;
             if(pathName.slice(-1)==='/'){
@@ -394,6 +389,18 @@ const Header = ({caseStudy}) => {
         // console.log(item.name,activeItemClassList);
         return activeItemClassList.join(' ');
     }
+
+    const scrollIntoViewHandle =(itemUrl)=>{
+        const hash = itemUrl.split('#')[1];
+        
+        if(window){
+            console.log('item url',itemUrl);
+            console.log('hash',hash);
+            window.location.hash = `#${hash}`
+            console.log('in scroll into view func',window.location);
+        }
+    }
+
     return (
         <StyledHeader className={`${caseStudy ? `caseStudyHeader`: null} ${showBkgCaseStudyNav ? 'showBkgColor' : null} ${isScrolling ? 'isScrolling':null}`} >
             <MobileNav style={mobileMenuListOpened ? {backgroundColor: '#f43908', minHeight: '810px'} : null}>
@@ -420,8 +427,9 @@ const Header = ({caseStudy}) => {
             </MobileNav>
             <DeskNav >
                 <div className={ 'navBar_desktop'}>
+                   
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                        <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>
+                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={'Work'} title={item.name}/>: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
                         </li>)}
                         <a href='/workingHomePage'>                           
                             <figure className='logoWrap'>
@@ -434,7 +442,8 @@ const Header = ({caseStudy}) => {
                         <li className='menuItem_desktop' key={index}>
                             {item.name==='about' && showAboutSubNav && <AboutSubNavList>
                                  {navItems.filter(subItem=>subItem.parent==='about' && subItem.subNav).map(((subItem,i)=><li key={i}>
-                                    <a className={`subItemLink`} href={subItem.url}>{subItem.name}</a>
+                                     <AnchorLink className={`subItemLink`} title={subItem.name} to={subItem.url}/>
+                                    {/* <a className={`subItemLink`} href={subItem.url}>{subItem.name}</a> */}
                                     </li>))}
                                 </AboutSubNavList>}
                             <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} mainItemLink`}>{item.name}</a>
