@@ -35,22 +35,6 @@ const navItems =[
         orderInSubList:null,
         subNav:false
     },
-    // {
-    //     name:'about',
-    //     url:'/about/#whoAreWe',
-    //     parent:'about',
-    //     orderInMainList:null,
-    //     orderInSubList:1,
-    //     subNav:true
-    // },
-    // {
-    //     name:'about',
-    //     url:'/about/#ourServices',
-    //     parent:'about',
-    //     orderInMainList:null,
-    //     orderInSubList:2,
-    //     subNav:true
-    // },
     {
         name:'contact',
         url:'/contact',
@@ -273,14 +257,20 @@ const DeskNav = styled.nav`
             min-width: 120px;
             box-sizing: border-box;
             &:hover{
-                border:2px solid #f43908;
-                border-radius: 4px;
-               
+                text-decoration: underline solid #f43908 3px; 
+                text-underline-position: under;
+                text-underline-offset:.25rem;               
             }
             &.contactBtn{
                 border:3px solid #f43908;
                 border-radius: 4px;
                 &:hover{
+                    background-color: #f43908;
+                    color: #222;
+                    text-decoration: none;
+                }
+                &.active{
+                    text-decoration: none;
                     background-color: #f43908;
                     color: #222;
                 }
@@ -329,8 +319,10 @@ const AboutSubNavList = styled.ul`
         }
         &:hover{
              background-color: #F43908;
+
         }
     }
+    
 `
 
 const Header = ({caseStudy}) => {
@@ -390,15 +382,14 @@ const Header = ({caseStudy}) => {
         return activeItemClassList.join(' ');
     }
 
-    const scrollIntoViewHandle =(itemUrl)=>{
-        const hash = itemUrl.split('#')[1];
-        
-        if(window){
-            console.log('item url',itemUrl);
-            console.log('hash',hash);
-            window.location.hash = `#${hash}`
-            console.log('in scroll into view func',window.location);
-        }
+   const testingFunc =()=>{
+       if(window){
+           console.log('testingFunc',window.location)
+       }
+   }
+
+    const toggleAboutSubNavState =()=>{
+        setShowAboutSubNav(!showAboutSubNav)
     }
 
     return (
@@ -429,7 +420,7 @@ const Header = ({caseStudy}) => {
                 <div className={ 'navBar_desktop'}>
                    
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={'Work'} title={item.name}/>: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
+                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} onAnchorLinkClick={testingFunc}/>: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
                         </li>)}
                         <a href='/workingHomePage'>                           
                             <figure className='logoWrap'>
@@ -439,22 +430,18 @@ const Header = ({caseStudy}) => {
                     {navItems.filter(item=>!item.subNav && item.orderInMainList>=3).map((item,index)=>{
                         
                     return(
-                        <li className='menuItem_desktop' key={index}>
+                        <li className={`menuItem_desktop`} key={index} onMouseEnter={item.name==='about'? toggleAboutSubNavState : null} onMouseLeave={item.name==='about' ? toggleAboutSubNavState : null}>
                             {item.name==='about' && showAboutSubNav && <AboutSubNavList>
                                  {navItems.filter(subItem=>subItem.parent==='about' && subItem.subNav).map(((subItem,i)=><li key={i}>
-                                     <AnchorLink className={`subItemLink`} title={subItem.name} to={subItem.url}/>
-                                    {/* <a className={`subItemLink`} href={subItem.url}>{subItem.name}</a> */}
+                                     <AnchorLink className={`subItemLink`} title={subItem.name} to={subItem.url} onAnchorLinkClick={()=>{setShowAboutSubNav(false);testingFunc()}}/>
                                     </li>))}
                                 </AboutSubNavList>}
-                            <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} mainItemLink`}>{item.name}</a>
+                            <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} ${item.name==='about' && showAboutSubNav ? 'active' : null} mainItemLink`}>{item.name}</a>
                         </li>  
                     )})}              
                       
                     </div>
             </DeskNav>
-            {/* {showAboutSubNav && <AboutSubNavList> {navItems.filter(subItem=>subItem.parent==='about' && subItem.subNav).map(((subItem,i)=><li key={i}>
-                        {subItem.name}
-                        </li>))} </AboutSubNavList>} */}
         </StyledHeader>
     )
 }

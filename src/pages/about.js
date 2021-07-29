@@ -64,8 +64,7 @@ const StyledSubTitle = styled.h3`
 
 
 const About = () => {
-  // const { theme } = useThemeUI();
-  // console.log('theme', theme)
+ 
   return (
     <Layout title={'About'}>
 

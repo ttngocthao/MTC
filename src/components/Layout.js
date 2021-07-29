@@ -33,18 +33,21 @@ const GifImgFigure = styled.figure`
 `
 
 const Layout = ({ title,caseStudy,children }) => {
-    const [pageLoaded,setPageLoaded] = useState(false);
-
+    const [showGif,setShowGif] = useState(true);
+    const [hash,setHash]= useState(null)
     useEffect(()=>{
         if(window){
-            window.scrollTo(0,0);
+            // window.scrollTo(0,0);
+            setHash(window.location.hash)            
         }
-        setTimeout(()=>{
-            setPageLoaded(true);
-        },4000)
+        if(title==='Home'){
+            setTimeout(()=>{
+                setShowGif(false);
+            },4000)
+        }
     },[])
 
-    if(!pageLoaded && title==='Home'){
+    if(showGif && title==='Home' && hash!=='#caseStudy'){
         return(
             <GifImgContainer>
                 <GifImgFigure> 
@@ -53,6 +56,7 @@ const Layout = ({ title,caseStudy,children }) => {
             </GifImgContainer>
         )
     }
+    
     return (
        <LayoutWrap>
             <Seo title={title}/>
