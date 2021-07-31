@@ -63,7 +63,7 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
             
             {pageTitle==='home' && <TitleWrap>
                 <h1>LET’S BUILD<br/>YOUR CULTURE</h1>
-                <h2>Purposeful design creates longevity and wins the hearts of many.</h2>
+                <h2>Purposeful design creates longevity<br/> and wins the hearts of many.</h2>
            </TitleWrap>}
            
             {pageTitle==='contact' && <TitleWrap contactTitle={true}>

@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
 export const StyledListWrap = styled.div`
     max-width:1376px;
     margin:0 auto;
-    padding:3rem 1rem;
+    padding:3rem 2rem;
     display:block;
     width:100%;
     @media only screen and (min-width: 920px){

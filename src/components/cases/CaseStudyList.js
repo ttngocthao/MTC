@@ -8,6 +8,15 @@ import Case5Img from '../../images/cases/Layer6.png';
 import Case6Img from '../../images/cases/Layer7.png';
 import Case7Img from '../../images/cases/Layer8.png';
 import Case8Img from '../../images/cases/Layer9.png';
+import MobileCase1Img from '../../images/cases/garden-sm.png';
+import MobileCase2Img from '../../images/cases/griffin-sm.png';
+import MobileCase3Img from '../../images/cases/egg-sm.png';
+import MobileCase4Img from '../../images/cases/pet-sm.png';
+import MobileCase5Img from '../../images/cases/curry-sm.png';
+import MobileCase6Img from '../../images/cases/itchy-sm.png';
+import MobileCase7Img from '../../images/cases/lemon-sm.png';
+import MobileCase8Img from '../../images/cases/salon-sm.png';
+
 import styled from 'styled-components';
 
 export const caseStudyData = [
@@ -15,6 +24,7 @@ export const caseStudyData = [
         title: 'Above & Beyond Garden',
         description: 'Increasing the beauty of your home',
         bkgImg: Case1Img,
+        mobileImg:MobileCase1Img,
         pageUrl: '/above-&-beyond-garden',
         orderInList: 0,
     },
@@ -22,12 +32,14 @@ export const caseStudyData = [
         title: 'Griffin Painting Services',
         description: 'BRINGING THE BUSINESS INTO THE PRESENT',
         bkgImg: Case2Img,
+        mobileImg:MobileCase2Img,
         pageUrl: '/griffin-painting-services',
         orderInList: 1
     },
     {
         title: 'Little Creek Farm',
         description: 'FARMED WITH LOVE',
+        mobileImg:MobileCase3Img,
         bkgImg: Case4Img,
         pageUrl: '/little-creek-farm',
         orderInList: 2
@@ -35,6 +47,7 @@ export const caseStudyData = [
      {
         title: "Louie's Place",
         description: "A PLACE WHERE PETS CAN DREAM",
+        mobileImg:MobileCase4Img,
         bkgImg: Case3Img,
         pageUrl: '/louies-place',
         orderInList: 3
@@ -43,6 +56,7 @@ export const caseStudyData = [
         title: 'Kaiju Curry House',
         description: 'KAIJU RELATED DISCUSSION, AND A SIDE OF BANTER',
         bkgImg: Case5Img,
+        mobileImg:MobileCase5Img,
         pageUrl: '/kaiju-curry-house',
         orderInList: 4
     },
@@ -50,6 +64,7 @@ export const caseStudyData = [
         title: 'Itchy & Sketchy',
         description: 'ONE OF A KIND CALLIGRAPHY GIFTS',
         bkgImg: Case6Img,
+        mobileImg:MobileCase6Img,
         pageUrl: '/itchy-&-sketchy',
         orderInList: 5
     },
@@ -57,6 +72,7 @@ export const caseStudyData = [
         title: 'Lemon',
         description: 'SMART BUSINESS CARDS',
         bkgImg: Case7Img,
+        mobileImg:MobileCase7Img,
         pageUrl: '/lemon-smart-business-card',
         orderInList: 6
     },
@@ -64,6 +80,7 @@ export const caseStudyData = [
         title: 'Salon 55',
         description: 'a L’Oreal Professional salon',
         bkgImg: Case8Img,
+        mobileImg:MobileCase8Img,
         pageUrl: '/salon-55',
         orderInList: 7
     }
@@ -92,6 +109,7 @@ const CaseStudyList = ({id}) => {
                     bkgImg={item.bkgImg}
                     pageUrl={item.pageUrl}
                     orderInList={item.orderInList}
+                    mobileImg={item.mobileImg}
                 />)}
         </UlList>
     )

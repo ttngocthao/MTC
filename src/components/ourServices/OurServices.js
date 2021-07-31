@@ -25,12 +25,12 @@ const servicesData =[
         title:'branding',
         description:'Branding is constructed from multiple business assets. It isn’t just one thing, it’s your logo, your tone of voice, the impression you leave on people once your ad has gone. Creating branding kits is what we do best.'
     },
-     {  orderInList:2,
+     {  orderInList:3,
         icon:DigitalIcon,
         title:'digital',
         description:'The digital world is ever growing and now-a-days, everyone and their dog has a website. But successful businesses have well thought-out, fully customised digital platforms. This means allowing the online version of your business work as well as you do.'
     },
-     {  orderInList:3,
+     {  orderInList:2,
         icon:IllustrationIcon,
         title:'illustration',
         description:'Illustration is a an art that carries itself through decade after decade. From product graphics, icons and children books, illustration can be an easy way to express your business message. And better still, these illustrations can be used in animated promos.'
@@ -53,6 +53,11 @@ const servicesData =[
 ]
 
 const OurServices = ({id}) => {
+    const orderedData = servicesData.sort((a,b)=>{
+        if(a.orderInList>b.orderInList) return 1;
+        if(a.orderInList<b.orderInList) return -1;
+        return 0
+    })
     return (
         <StyledContainer id={id}>
             <StyledListWrap style={{display:'block'}}>
@@ -64,11 +69,11 @@ const OurServices = ({id}) => {
                 </div>               
             </StyledListWrap>
             <StyledServicesList>
-                {servicesData.filter(item=>item.orderInList<4).map((item,index)=> <ServiceItem key={index} icon={item.icon} title={item.title} description={item.description}/>)}
+                {orderedData.filter(item=>item.orderInList<4).map((item,index)=> <ServiceItem key={index} icon={item.icon} title={item.title} description={item.description}/>)}
             </StyledServicesList>
            
            <StyledServicesList style={{marginBottom:'3rem'}}>
-                {servicesData.filter(item=>item.orderInList>=4).map((item,index)=> <ServiceItem key={index} icon={item.icon} title={item.title} description={item.description}/>)}
+                {orderedData.filter(item=>item.orderInList>=4).map((item,index)=> <ServiceItem key={index} icon={item.icon} title={item.title} description={item.description}/>)}
             </StyledServicesList>
         </StyledContainer>
     )

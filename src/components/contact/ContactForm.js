@@ -123,7 +123,7 @@ const ContactForm = () => {
                 }}
                 validate={(values)=>validate(values)}
                 onSubmit={async (values) => {
-                    const mailSendUrl = 'http://mightycultured.co.uk/mail_form.php'
+                    const mailSendUrl = 'https://mightycultured.co.uk/mail_form.php'
                     
                     const res = await fetch(mailSendUrl,{
                         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -140,9 +140,9 @@ const ContactForm = () => {
                     })
                     // await new Promise((r) => setTimeout(r, 500));
                     // alert(JSON.stringify(values, null, 2));
-                    console.log(values)
-                    console.log(res)
-                    return res.json();
+                    // console.log(values)
+                    console.log(res);
+                    // return res.json();
                 }}
                 >
          {({isValid,dirty})=> {

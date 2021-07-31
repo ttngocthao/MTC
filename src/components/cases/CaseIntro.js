@@ -24,7 +24,7 @@ const CaseIntro = ({companyTextArr,briefTextArr,scopeNameArr}) => {
                         <h3 >THE COMPANY</h3>
                         {companyTextArr.map((p,index)=><p key={index}>{p}</p>)}
                     </StyledParagraph>
-                    <StyledParagraph>
+                    <StyledParagraph style={{marginBottom:0}}>
                         <h3>THE BRIEF</h3>
                         {briefTextArr.map((p,index)=><p key={index}>{p}</p>)}
                     </StyledParagraph>

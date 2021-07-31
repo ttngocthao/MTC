@@ -10,7 +10,7 @@ const Wrap = styled.div`
 const StyledContainer = styled.div`
     background-color: #222;
     font-family: 'Barrow';
-    padding: 2rem 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
      @media only screen and (min-width: 700px){

@@ -10,24 +10,26 @@ const TitleWrap = styled.div`
     transform: translate(-50%, -50%);
     /* background-color: red; */
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 2rem;
     /* padding:0 1rem; */
       @media only screen and (min-width: 1200px){
           padding-left: 0rem;
       }
     h1{
         max-width: 220px;
-        /* line-height: 1; */
+        line-height: 1;
         margin: 0 ;
         color:white;
         font-size: 3rem;
         font-weight:900;
         font-family: 'Barlow';
+
         
          @media only screen and (min-width: 600px){
               max-width: 1120px;
               margin: 0 auto ; 
               font-size: 4.3rem;
+              
               /* padding-left: 1rem; */
          }
          
@@ -38,9 +40,10 @@ const TitleWrap = styled.div`
         color:#f43908;
         font-size:1.2rem;
         font-weight: 600;
+        line-height: 1;
          @media only screen and (min-width: 600px){
               max-width: 1120px;
-              margin: .5rem auto 0;
+              margin: 1rem auto 0;
               font-size:2.15rem;
               /* padding-left: 1rem; */
          }

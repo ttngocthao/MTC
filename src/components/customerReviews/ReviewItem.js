@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const StyledReviewItem = styled.div`
     background-color: white;
     width: 100%;
-    margin:1rem auto;
+    margin:1rem auto 2rem;
     padding:1.5rem;
     @media only screen and (min-width: 920px){
         max-width:398px;

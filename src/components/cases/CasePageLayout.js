@@ -22,6 +22,7 @@ export const LeftCol = styled.div`
     padding-bottom: 2rem;
     @media only screen and (min-width: 1024px){
         padding-right: 2rem;
+         padding-bottom: 0rem;
         /* width: 70%; */
                 
     }

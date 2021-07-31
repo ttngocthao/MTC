@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import styled from 'styled-components'
+import useWindowSize from '../../hooks/useWindowSize'
 
 import { RightArrowAlt } from '@styled-icons/boxicons-regular/'
 const ItemWrap = styled.li`
@@ -60,10 +61,23 @@ const CaseDescriptionWrap = styled.div`
               /* padding-left: 1rem; */
          }
 `
+const MobileItemWrap = styled.li`
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 0 1rem;
+    figure{
+        margin:0;
+        img{
+            width:100%;
+        }
+    }
+`
 
 
-
-const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
+const CaseItem = ({ title, description, bkgImg, pageUrl,mobileImg, orderInList }) => {
+    // const {width} = useWindowSize();
+    // const [showMobileLayout,setMobileLayout]= useState(false)
     const [showDescription, setShowDescription] = useState(false)
     const hoveredViewCaseBtnStyles = {border:'#000 solid 2px',borderRadius:'5px',backgroundColor:'rgba(0,0,0,0)',color:'#000'}
     const hoveredArrowStyles ={color:'#000'}
@@ -73,9 +87,18 @@ const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
     const mouseLeaveHandle =()=>{
         setShowDescription(false)
     }
-    return (
+    // useEffect(() => {
+    //    // console.log('width',width);
+    //     if(width<700){
+    //         setMobileLayout(true)
+    //     }else{
+    //         setMobileLayout(false)
+    //     }
+    // }, [width])
+    // if(!showMobileLayout){
+       return (
         <ItemWrap style={{ backgroundImage: `url(${bkgImg})`}} onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
-            <a href={pageUrl} target='_blank' rel="noreferrer">
+            <a href={pageUrl} rel="noreferrer">
                <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
            
                 {showDescription && 
@@ -86,7 +109,26 @@ const CaseItem = ({ title, description, bkgImg, pageUrl, orderInList }) => {
                 }  
             </a>           
         </ItemWrap>
-    )
+        ) 
+    // }else{
+    //     return(<MobileItemWrap onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
+    //         <a href={pageUrl} rel="noreferrer">
+    //             <figure >
+    //                 <img  alt='' src={mobileImg}/>
+    //             </figure> 
+    //             <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
+           
+    //             {showDescription && 
+    //                 <ViewCaseButton style={showDescription ? hoveredViewCaseBtnStyles : null}>
+    //                     <h3 style={{ paddingRight: '1rem',marginBottom:0,fontWeight:400 }}>{title}</h3>
+    //                     <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
+    //                 </ViewCaseButton>
+    //             }  
+    //         </a>
+            
+    //     </MobileItemWrap>)
+    // }
+    
 }
 
 export default CaseItem
