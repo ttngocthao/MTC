@@ -56,12 +56,12 @@ const HomePage = () => {
       <HomePageHero/>
       <HomePageIntro>
         <LeftCol>
-           <h3> How does my brand define itself from the competition? Can we build consistency across our assets? Is there a way we can take our brand culture to the next level?</h3>
+           <h3>How does my brand define itself from the competition? Can we build consistency across our assets? Is there a way we can take our brand culture to the next level?</h3>
         </LeftCol>
         <RightCol>
         <p>It’s questions like this that the team at Mighty Cultured love to solve. We collaborate with each of our clients to ensure individual requirements are met, offering longevity for each project we work on. We believe brand builds culture, we believe it forms unity and creates impact, and that’s what we want to continue for you.</p>
         <p>
-        We are a design studio working with businesses that enjoy the benefits of change, that out-think the competition and see the potential in strong brand presence.</p>
+       We are a branding & creative studio working with businesses that enjoy the benefits of change, that out-think the competition and see the potential in strong brand presence.</p>
         </RightCol>
       </HomePageIntro>
      
