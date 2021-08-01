@@ -34,10 +34,10 @@ const reviewData =[
         msg:'“So happy with the service and help with my company logo and branding. The team at Mighty Cultured created the perfect design for me and was very helpful through the process. Will be using again in the future and would highly recommend!!!”'
     },
      {
-        name:'Kloe Dean',
-        brand:'KloeD-1',
+        name:'Hollie Keen',
+        brand:'Keen’s Dream Events',
          logo:Logo2Img,
-        msg:'“Outstanding service. The logo and graphics created for my business captured my brand exactly as I wished. In turn I have had an uptake of clients 2 fold to my previous intake. The process was stress free and efficient. I’m so happy with the design, communication throughout and overall service. Thank you so much!!”'
+        msg:'“Mighty Cultured made me the most amazing logo couldn’t be happier and they were completely professional from start to finish”'
     },
      {
         name:'Dave Moczulski',
