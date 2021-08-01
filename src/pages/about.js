@@ -75,7 +75,7 @@ const About = () => {
           <StyledParagraph> 
             <div  className='leftCol'>
                <StyledTitle style={{color:'black',maxWidth:'540px'}}>
-            Who are we?
+              Who are we?
             </StyledTitle>
             <StyledSubTitle>
               We solve business problems together one project at a time
@@ -84,10 +84,10 @@ const About = () => {
             <div className='rightCol'>
                 <p>Purposeful, well thought-out design creates longevity and wins the hearts of the consumer.</p>
                 <p>
-                We are Mighty Cultured, a UK based design studio that applies the above statement to every project we work on. We believe that design is more than just placing objects and text together on a page and hoping for a nice outcome. The project itself needs to have a well thought-out end use in mind. How will someone interact with a restaurant website, what is the key information needed from an infographic and how does that product make you feel? These sorts of questions are just as important as the design itself.
+                We are Mighty Cultured, a London based branding and creative studio that applies the above statement to every project we work on. We believe that design is more than just placing objects and text together on a page and hoping for a nice outcome. The project itself needs to have a well thought-out end use in mind. How will someone interact with a restaurant website, what is the key information needed from an infographic and how does that product make you feel? These sorts of questions are just as important as the design itself.
                 </p>
                 <p>
-                We are a team of experienced creatives with multiple skills within the industry, allowing us to offer the best fit for your needs.  </p>
+                We are a team of experienced creatives with multiple skills within the industry, allowing us to offer the best fit for your needs.</p>
             </div>
            
           </StyledParagraph>         

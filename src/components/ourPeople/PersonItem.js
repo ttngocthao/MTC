@@ -16,7 +16,7 @@ const ItemContainer = styled.div`
     }
     p{
         margin-bottom:1rem;
-        max-width:429px;
+        max-width:436px;
 
         margin-left: 0;
     }
