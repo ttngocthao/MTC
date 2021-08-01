@@ -44,9 +44,9 @@ const Layout = ({ title,caseStudy,children }) => {
             }
            
            
-            if(window.location.href===window.sessionStorage.getItem('origin')){
-                    sessionStorage.removeItem('firstLoadDone')
-            }
+                if(window.location.href===window.sessionStorage.getItem('origin')){
+                     sessionStorage.removeItem('firstLoadDone')
+                }
            
            
            
@@ -57,58 +57,38 @@ const Layout = ({ title,caseStudy,children }) => {
                     setTimeout(()=>{
                         setShowGif(false);
                     },4000)
-                } else{
+                     window.sessionStorage.setItem('firstLoadDone',1)
+                }  else{
                     setShowGif(false);
-                }  
-                window.sessionStorage.setItem('firstLoadDone',1) 
+                } 
+                
              }  else{
                  
                  setShowGif(false);
              }
-
-             
                
         }
         
-    },[])
+    },[title])
 
-    if(title==='Home' && hash===''){
-       if(showGif){
-            return(
+    if(showGif && title==='Home' && hash===''){
+        return(
             <GifImgContainer>
                 <GifImgFigure> 
                     <img src={GifImg} alt=''/>
                 </GifImgFigure>
             </GifImgContainer>
         )
-       }else{
-           return (
-                <LayoutWrap>
-                    <Seo title={title}/>
-                    <Header caseStudy={caseStudy}/>
-                    <main>             
-                        {children}
-                    </main>
-                    <Footer />
-                </LayoutWrap>
-            
-            )
-       }
-       
     }
-   
+    
     return (
        <LayoutWrap>
             <Seo title={title}/>
-            {!showGif &&  <>
-                <Header caseStudy={caseStudy}/>
-                <main>             
-                    {children}
-                </main>
-                <Footer />
-            
-            </>}
-           
+            <Header caseStudy={caseStudy}/>
+            <main>             
+                {children}
+            </main>
+            <Footer />
         </LayoutWrap>
        
     )

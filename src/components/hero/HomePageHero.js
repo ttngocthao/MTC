@@ -1,5 +1,5 @@
 import React from 'react'
-import PageTitle from '../pageTitle/PageTitle'
+
 import HeroLogo from '../../images/hero/heroLogo.png'
 import BkgImg from '../../images/hero/heroHomeBkg.png'
 import styled from 'styled-components'

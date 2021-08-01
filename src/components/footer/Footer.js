@@ -98,7 +98,7 @@ const Footer = () => {
     })
     const currentYear = new Date().getFullYear();
   
-    console.log('currentYear',currentYear)
+  
     return (
         <Wrap>
             <StyledFooter>

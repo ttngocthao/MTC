@@ -366,7 +366,7 @@ const Header = ({caseStudy}) => {
             }
         }
 
-    },[scroll.y]);
+    },[scroll.y,caseStudyPaths,currentPath]);
 
  
     const getActiveItemClassName =(item)=>{

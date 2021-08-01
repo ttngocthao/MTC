@@ -1,6 +1,6 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import useWindowSize from '../../hooks/useWindowSize'
+
 
 import { RightArrowAlt } from '@styled-icons/boxicons-regular/'
 const ItemWrap = styled.li`
@@ -61,18 +61,18 @@ const CaseDescriptionWrap = styled.div`
               /* padding-left: 1rem; */
          }
 `
-const MobileItemWrap = styled.li`
-    list-style: none;
-    box-sizing: border-box;
-    position: relative;
-    margin: 0 0 1rem;
-    figure{
-        margin:0;
-        img{
-            width:100%;
-        }
-    }
-`
+// const MobileItemWrap = styled.li`
+//     list-style: none;
+//     box-sizing: border-box;
+//     position: relative;
+//     margin: 0 0 1rem;
+//     figure{
+//         margin:0;
+//         img{
+//             width:100%;
+//         }
+//     }
+// `
 
 
 const CaseItem = ({ title, description, bkgImg, pageUrl,mobileImg, orderInList }) => {
