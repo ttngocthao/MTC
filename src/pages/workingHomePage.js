@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import HomePageHero from '../components/hero/HomePageHero';
 import Hero from '../components/hero/Hero';
 import HeroImg from '../images/hero/fullHomeHero.png';
+import TestingImg from '../images/hero/testing.png';
 
 const HomePageIntro = styled.div`
  padding:2rem;
@@ -54,7 +55,7 @@ const HomePage = () => {
 
       <title>Home Page</title>
 
-      <Hero noTopLayout={true} pageTitle='home' heroSrc={HeroImg}/>
+      <Hero noTopLayout={true} pageTitle='home' heroSrc={TestingImg}/>
       {/* <HomePageHero/> */}
       <HomePageIntro>
         <LeftCol>
