@@ -39,10 +39,12 @@ const Layout = ({ title,caseStudy,children }) => {
         if(window){
             window.scrollTo(0,0);
             setHash(window.location.hash) 
-            window.onbeforeunload = ()=>{
+            // window.onbeforeunload = ()=>{
+            //     window.sessionStorage.setItem('origin',window.location.href)
+            // }
+            window.addEventListener('unload', () => {
                 window.sessionStorage.setItem('origin',window.location.href)
-            }
-           
+            });
            
                 if(window.location.href===window.sessionStorage.getItem('origin')){
                      sessionStorage.removeItem('firstLoadDone')
@@ -53,7 +55,7 @@ const Layout = ({ title,caseStudy,children }) => {
 
             if(window.sessionStorage.getItem('firstLoadDone')===null){
                 if(title==='Home' && window.location.hash===''){
-                    setShowGif(true);
+                    // setShowGif(true);
                     setTimeout(()=>{
                         setShowGif(false);
                     },4000)
