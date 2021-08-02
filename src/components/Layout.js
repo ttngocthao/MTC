@@ -58,7 +58,7 @@ const Layout = ({ title,caseStudy,children }) => {
                     // setShowGif(true);
                     setTimeout(()=>{
                         setShowGif(false);
-                    },4000)
+                    },3500)
                      window.sessionStorage.setItem('firstLoadDone',1)
                 }  else{
                     setShowGif(false);
