@@ -150,7 +150,7 @@ const StyledHeader = styled.header`
 `
 const MobileNav = styled.nav`
     
-    padding:1.24rem 1rem;
+    padding:1.24rem 2rem;
     display: block;
     
     .logoWrap{

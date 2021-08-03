@@ -14,7 +14,9 @@ import Img2 from '../images/cases/painting/img2.png'
 import Img3 from '../images/cases/painting/img3.png'
 import Img4 from '../images/cases/painting/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import VanMobileImg from '../images/cases/painting/painting-van.png'
+import WhiteLogoImg from '../images/cases/painting/painting-logo.png'
+import DarkLogoImg from '../images/cases/painting/painting-logo-d.png'
 const BeyondGarden = () => {
     return (
         <CasePageLayout 
@@ -32,8 +34,8 @@ const BeyondGarden = () => {
                 scopeNameArr={['BI','BS','MM']}
             />
             
-            <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={VanDesignImg}/>
+            <RectangleImgDisplay imgSrc={LogoFullWidthImg} mobileSrcArr={[DarkLogoImg,WhiteLogoImg]}/>
+            <RectangleImgDisplay imgSrc={VanDesignImg} mobileSrc={VanMobileImg}/>
             <TwoImgsInRow img1Src={LogoDesignImg} img2Src={IconDesignImg}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          

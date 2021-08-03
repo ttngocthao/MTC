@@ -55,7 +55,7 @@ const HomePage = () => {
 
       <title>Home Page</title>
 
-      <Hero noTopLayout={true} pageTitle='home' heroSrc={TestingImg}/>
+      <Hero noTopLayout={true} pageTitle='home' heroSrc={HeroImg}/>
       {/* <HomePageHero/> */}
       <HomePageIntro>
         <LeftCol>

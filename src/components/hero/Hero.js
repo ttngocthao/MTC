@@ -61,7 +61,7 @@ const Hero = ({heroSrc,pageTitle,noTopLayout,caseStudy,caseDescription,caseNameA
             className={`${caseStudy ? 'caseStudy' : null} ${pageTitle==='about' ? 'addMarginBottom': null}`} 
             style={minHeight ? {backgroundImage:backgroundImageStyle,minHeight:`${minHeight}px`,marginTop:0}: {backgroundImage:backgroundImageStyle}}>
             
-            {pageTitle==='home' && <TitleWrap>
+            {pageTitle==='home' && <TitleWrap className={`title--homepage`}>
                 <h1>LET’S BUILD<br/>YOUR CULTURE</h1>
                 <h2>Purposeful design creates longevity<br/> and wins the hearts of many.</h2>
            </TitleWrap>}

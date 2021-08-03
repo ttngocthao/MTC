@@ -15,7 +15,7 @@ import Img2 from '../images/cases/farm/smlSquareImg2.png'
 import Img3 from '../images/cases/farm/smlSquareImg3.png'
 import Img4 from '../images/cases/farm/smlSquareImg4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import FarmMobileImg from '../images/cases/farm/farm.png'
 
 
 const LittleCreekFarm = () => {
@@ -36,7 +36,7 @@ const LittleCreekFarm = () => {
             />
                
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={LittleCreekFarmImg}/>
+            <RectangleImgDisplay imgSrc={LittleCreekFarmImg} mobileSrc={FarmMobileImg}/>
             <TwoImgsInRow img1Src={EggBoxImg} img2Src={OpenedEggBoxImg}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
         </CasePageLayout>

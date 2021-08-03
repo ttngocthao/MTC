@@ -11,6 +11,12 @@ export const Row = styled.div`
         margin: 0 7.3% 3rem;        
                     
         }
+    &.one-become-two{
+        display: block;
+         @media only screen and (min-width: 700px){
+             display: none;
+         }
+    }
 `
 export const ImgItem = styled.figure`
     margin:0 0 1.5rem;
@@ -28,9 +34,9 @@ export const ImgItem = styled.figure`
    
 `
 
-const TwoImgsInRow = ({img1Src,img2Src}) => {
+const TwoImgsInRow = ({img1Src,img2Src,className}) => {
     return (
-        <Row>
+        <Row className={className}>
             {[img1Src,img2Src].map((item,index)=> <ImgItem key={index}>
                 <img alt='' src={item}/>
             </ImgItem>)}           

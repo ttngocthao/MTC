@@ -14,7 +14,7 @@ import Img2 from '../images/cases/sketchy/img2.png'
 import Img3 from '../images/cases/sketchy/img3.png'
 import Img4 from '../images/cases/sketchy/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import MobileImg from '../images/cases/sketchy/itchy-palette.png'
 const ItchyAndSketchy = () => {
     return (
         <CasePageLayout 
@@ -34,7 +34,7 @@ const ItchyAndSketchy = () => {
             />
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
+            <RectangleImgDisplay imgSrc={ColorPaletteImg} mobileSrc={MobileImg}/>
             <TwoImgsInRow img1Src={SquareImg2} img2Src={SquareImg1}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          

@@ -14,7 +14,9 @@ import Img2 from '../images/cases/salon/img2.png'
 import Img3 from '../images/cases/salon/img3.png'
 import Img4 from '../images/cases/salon/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import MobileServiceImg from '../images/cases/salon/salon-services.png'
+import MobileLeftImg from '../images/cases/salon/salon-website.png'
+import MobileRightImg from '../images/cases/salon/salon-logo.png'
 const Salon = () => {
     return (
          <CasePageLayout 
@@ -32,8 +34,8 @@ const Salon = () => {
                 ]}
                 scopeNameArr={['WS','MM']}
             />
-            <RectangleImgDisplay imgSrc={ProfilePageImg}/>
-            <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
+            <RectangleImgDisplay imgSrc={ProfilePageImg} mobileSrc={MobileServiceImg}/>
+            <RectangleImgDisplay imgSrc={LogoFullWidthImg} mobileSrcArr={[MobileLeftImg,MobileRightImg]}/>
             
             <TwoImgsInRow img1Src={SquareImg1} img2Src={SquareImg2}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>

@@ -14,7 +14,8 @@ import Img2 from '../images/cases/lemon/img2.png'
 import Img3 from '../images/cases/lemon/img3.png'
 import Img4 from '../images/cases/lemon/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import MobileLogoImg from '../images/cases/lemon/lemon-logo.png'
+import MobilePaletteImg from '../images/cases/lemon/lemon-palette.png'
 const LemonSmartBCard = () => {
     return (
         <CasePageLayout 
@@ -33,8 +34,8 @@ const LemonSmartBCard = () => {
                 scopeNameArr={['BA','WD','MM']}
             />
             
-            <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
+            <RectangleImgDisplay imgSrc={LogoFullWidthImg} mobileSrc={MobileLogoImg}/>
+            <RectangleImgDisplay imgSrc={ColorPaletteImg} mobileSrc={MobilePaletteImg}/>
             <TwoImgsInRow img1Src={SquareImg1} img2Src={SquareImg2}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          

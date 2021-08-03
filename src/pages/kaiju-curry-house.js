@@ -14,7 +14,8 @@ import Img2 from '../images/cases/curry/img2.png'
 import Img3 from '../images/cases/curry/img3.png'
 import Img4 from '../images/cases/curry/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import MobileLeftImg from '../images/cases/curry/curry-shirt.png'
+import MobileRightImg from '../images/cases/curry/curry-mobile.png'
 const KaijuCurryHouse = () => {
     return (
         <CasePageLayout 
@@ -33,7 +34,7 @@ const KaijuCurryHouse = () => {
             />
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ShirtMobileImg}/>
+            <RectangleImgDisplay imgSrc={ShirtMobileImg} mobileSrcArr={[MobileLeftImg,MobileRightImg]}/>
             <TwoImgsInRow img1Src={SquareImg1} img2Src={SquareImg2}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          

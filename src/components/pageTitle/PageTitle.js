@@ -49,6 +49,18 @@ const TitleWrap = styled.div`
          }
         
     }
+    &.title--homepage{
+      
+             display: none;
+      
+       
+         @media only screen and (min-width: 700px){
+            
+             display: block;
+              
+              /* padding-left: 1rem; */
+         }
+    }
 `
 
 const ContactTitleWrap = styled(TitleWrap)`
@@ -84,7 +96,7 @@ const ContactTitleWrap = styled(TitleWrap)`
    
 `
 
-const PageTitle = ({contactTitle,children}) => {
+const PageTitle = ({contactTitle,className,children}) => {
     if(contactTitle){
         return (
             <ContactTitleWrap>
@@ -93,7 +105,7 @@ const PageTitle = ({contactTitle,children}) => {
         )
     }else{
          return (
-            <TitleWrap>
+            <TitleWrap className={className}>
                 {children}
             </TitleWrap>
         )

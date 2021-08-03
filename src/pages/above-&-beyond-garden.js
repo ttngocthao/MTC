@@ -14,6 +14,7 @@ import Img2 from '../images/cases/garden/img2.png'
 import Img3 from '../images/cases/garden/img3.png'
 import Img4 from '../images/cases/garden/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
+import PaletteMobileImg from '../images/cases/garden/garden-palette.png'
 
 const BeyondGarden = () => {
     return (
@@ -33,7 +34,7 @@ const BeyondGarden = () => {
             />
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
+            <RectangleImgDisplay imgSrc={ColorPaletteImg} mobileSrc={PaletteMobileImg}/>
             <TwoImgsInRow img1Src={TShirtImg} img2Src={BCardImg}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          

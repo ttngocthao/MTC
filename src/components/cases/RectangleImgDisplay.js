@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import TwoImgsInRow,{Row,ImgItem} from './TwoImgsInRow'
 
 const ImgDisplay = styled.figure`
     margin: 0 auto 1.5rem;
     padding:0;
-    display:none;
+    display: none;
     @media only screen and (min-width: 700px){
        display:block;
        margin: 0 7.3% 3rem;
@@ -14,6 +15,15 @@ const ImgDisplay = styled.figure`
     img{
         width:100%;
         vertical-align: bottom;
+    }
+`
+const CustomisedImgOnMobileDisplay = styled(ImgDisplay)`
+    padding:0 1rem;
+    display: block;
+    @media only screen and (min-width: 700px){
+       display:none;
+         
+                
     }
 `
 const ImgDisplayOnMobile = styled.div`
@@ -39,15 +49,17 @@ const ImgDisplayOnMobile = styled.div`
     }
 `
 
-const RectangleImgDisplay = ({imgSrc}) => {
+
+const RectangleImgDisplay = ({imgSrc,mobileSrc,mobileSrcArr}) => {
     return (
         <>
         <ImgDisplay>
             <img src={imgSrc} alt=''/>
         </ImgDisplay>
-        <ImgDisplayOnMobile>
+        {!mobileSrc && mobileSrcArr && <TwoImgsInRow className={`one-become-two`} img1Src={mobileSrcArr[0]} img2Src={mobileSrcArr[1]}/>}
+        {mobileSrc ? <CustomisedImgOnMobileDisplay><img src={mobileSrc} alt=''/></CustomisedImgOnMobileDisplay> :  (!mobileSrcArr && !mobileSrc &&<ImgDisplayOnMobile>
             <div className='bgImg' style={{backgroundImage:`url(${imgSrc})`}}/>
-        </ImgDisplayOnMobile>
+        </ImgDisplayOnMobile>)}
         </>
         
     )

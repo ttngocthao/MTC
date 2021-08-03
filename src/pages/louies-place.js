@@ -14,7 +14,8 @@ import Img2 from '../images/cases/pet/img2.png'
 import Img3 from '../images/cases/pet/img3.png'
 import Img4 from '../images/cases/pet/img4.png'
 import CaseIntro from '../components/cases/CaseIntro'
-
+import MobileYLogo from '../images/cases/pet/pet-logo-y.png'
+import MobileDLogo from '../images/cases/pet/pet-logo-d.png'
 const LouiesPlace = () => {
     return (
         <CasePageLayout 
@@ -33,7 +34,7 @@ const LouiesPlace = () => {
             />
             
             <RectangleImgDisplay imgSrc={LogoFullWidthImg}/>
-            <RectangleImgDisplay imgSrc={ColorPaletteImg}/>
+            <RectangleImgDisplay imgSrc={ColorPaletteImg} mobileSrcArr={[MobileYLogo,MobileDLogo]}/>
             <TwoImgsInRow img1Src={SquareImg2} img2Src={SquareImg1}/>
             <FourImgsInRow img1Src={Img1} img2Src={Img2} img3Src={Img3} img4Src={Img4}/>
          
