@@ -49,7 +49,7 @@ const TitleWrap = styled.div`
          }
         
     }
-    &.title--homepage{
+    /* &.title--homepage{
       
              display: none;
       
@@ -60,7 +60,7 @@ const TitleWrap = styled.div`
               
               /* padding-left: 1rem; */
          }
-    }
+    } */
 `
 
 const ContactTitleWrap = styled(TitleWrap)`
