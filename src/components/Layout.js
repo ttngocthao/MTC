@@ -3,7 +3,8 @@ import Seo from './Seo'
 import styled from 'styled-components'
 import Footer from './footer/Footer'
 import Header from './header/Header'
-import GifImg from '../images/MC_logo_v2.gif'
+import GifImg from '../images/MC_logo_v2_s.gif'
+
 
 const LayoutWrap = styled.section`
     max-width: 1920px;
@@ -16,6 +17,9 @@ const GifImgContainer = styled.div`
     left: 0;
     width: 100vw;
     background-color: #1D1918;
+    @media only screen and (max-width: 700px){
+         display: none;
+     }
     
 `
 const GifImgFigure = styled.figure`
@@ -30,42 +34,46 @@ const GifImgFigure = styled.figure`
     img{
         width:100%;
     }
+     @media only screen and (max-width: 700px){
+         display: none;
+     }
 `
 
 const Layout = ({ title,caseStudy,children }) => {
     const [showGif,setShowGif] = useState(true);
     const [hash,setHash]= useState(null)
+    // const {width} = useWindowSize();
     useEffect(()=>{
+        
+
         if(window){
             window.scrollTo(0,0);
             setHash(window.location.hash) 
-            window.onbeforeunload = ()=>{
-                window.sessionStorage.setItem('origin',window.location.href)
-            }
-           
-           
-                if(window.location.href===window.sessionStorage.getItem('origin')){
-                     sessionStorage.removeItem('firstLoadDone')
+            if(window.innerWidth<700){
+                setShowGif(false);
+             }else{
+                window.onbeforeunload = ()=>{
+                    window.sessionStorage.setItem('origin',window.location.href)
                 }
-           
-           
-           
-
-            if(window.sessionStorage.getItem('firstLoadDone')===null){
+                if(window.location.href===window.sessionStorage.getItem('origin')){
+                    sessionStorage.removeItem('firstLoadDone')
+                }
+                if(window.sessionStorage.getItem('firstLoadDone')===null){
                 if(title==='Home' && window.location.hash===''){
-                    setShowGif(true);
-                    setTimeout(()=>{
+                        setShowGif(true);
+                        setTimeout(()=>{
+                            setShowGif(false);
+                        },4000)
+                        window.sessionStorage.setItem('firstLoadDone',1)
+                    }  else{
                         setShowGif(false);
-                    },4000)
-                     window.sessionStorage.setItem('firstLoadDone',1)
+                    } 
+                    
                 }  else{
+                    
                     setShowGif(false);
-                } 
-                
-             }  else{
-                 
-                 setShowGif(false);
-             }
+                }
+             }            
                
         }
         

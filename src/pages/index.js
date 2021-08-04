@@ -1,57 +1,79 @@
-import React,{useEffect} from 'react'
-import {Link} from 'gatsby'
+import Layout from '../components/Layout';
 import 'semantic-ui-css/semantic.min.css';
-import LogoCoreImg from '../images/LogoCore.svg'
-import ConstructionImg from '../images/construction.png'
-import './temp.css'
-import BeImg from '../images/beIcon.png'
-import FImg from '../images/facebookIcon.png'
-import IImg from '../images/instagramIcon.png'
-// markup
-const IndexPage = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.document) {
-      return;
-    }else{
-      document.getElementsByTagName('html')[0].style.backgroundColor='#222';
-      document.getElementsByTagName('body')[0].style.backgroundColor='#222';
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import CaseStudyList from '../components/cases/CaseStudyList';
+import Contact  from '../components/contact/Contact';
+import styled from 'styled-components';
+
+import Hero from '../components/hero/Hero';
+import HeroImg from '../images/hero/fullHomeHero.png';
+
+
+const HomePageIntro = styled.div`
+ padding:2rem;
+  @media only screen and (min-width: 1024px){
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+       margin:0 20.78%;
+        
     }
-  }, []);
+
+`
+
+const RightCol = styled.div`
+  padding-left: 0;
+  @media only screen and (min-width: 1024px){
+        padding-left: 3rem;
+        border-left: 1px solid #222;
+       
+        
+    }
+`
+
+const LeftCol = styled.div`
+  padding-bottom: 2rem;
+  
+  h3{
+    font-size:16px;
+    line-height: 1.5;
+  }
+  @media only screen and (min-width: 1024px){
+        padding-bottom: 0;
+       padding-right: 3rem;
+      
+    }
+`
+
+// markup
+const HomePage = () => {
+  
   
   return (
-    <div className="constructionPage">
-   
-    <main className='main'>
-      <figure className="logo">
-        <img
-          src={LogoCoreImg}
-          alt="logo core"
-        />
-      </figure>
-      <section className="mainContent">
-        <section className="photo">
-          <figure>
-            <img alt='' src={ConstructionImg}/>
-          </figure>
-        </section>
-        <section className="info">
-          <h1 >WE’RE BUILDING SOMETHING GREAT</h1>
-          <h3>Check back in<br/>
-              on the 1st August 2021.
-          </h3>
-          <div className="p">If you’d like to see samples of any of our work in the meantime please head on over to our Behance page or hit the contact button to have a chat about your next project.</div>
-        </section> 
-      </section>
-      <ul className="socialMedia">
-        <li className="contactBtn"><a href="mailto:team@mightycultured.co.uk">contact</a></li>
-        <li><Link to="https://www.behance.net/mightycultured"><img alt='' src={BeImg}/></Link></li>
-        <li><Link to="https://www.instagram.com/mightyculturedltd/"><img alt='' src={IImg}/></Link></li>
-        <li><Link to="https://www.facebook.com/Mighty-Cultured-426372721081128"><img alt='' src={FImg}/></Link></li>
-      </ul>  
-    </main>
-   
-  </div>
+    <Layout title={'Home'}>
+
+      <title>Home Page</title>
+
+      <Hero noTopLayout={true} pageTitle='home' heroSrc={HeroImg}/>
+    
+      <HomePageIntro>
+        <LeftCol>
+           <h3>How does my brand define itself from the competition? Can we build consistency across our assets? Is there a way we can take our brand culture to the next level?</h3>
+        </LeftCol>
+        <RightCol>
+        <p>It’s questions like this that the team at Mighty Cultured love to solve. We collaborate with each of our clients to ensure individual requirements are met, offering longevity for each project we work on. We believe brand builds culture, we believe it forms unity and creates impact, and that’s what we want to continue for you.</p>
+        <p>
+       We are a branding &#38; creative studio working with businesses that enjoy the benefits of change, that out-think the competition and see the potential in strong brand presence.</p>
+        </RightCol>
+      </HomePageIntro>
+     
+      <CaseStudyList id='caseStudy'/>
+
+      <Contact/>
+
+    </Layout>
   )
 }
 
-export default IndexPage
+export default HomePage

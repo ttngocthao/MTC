@@ -13,7 +13,7 @@ import { caseStudyData } from '../cases/CaseStudyList'
 const navItems =[
     {
         name:'home',
-        url:'/workingHomePage',
+        url:'/',
         parent:null,
         orderInMainList:1,
         orderInSubList:null,
@@ -21,7 +21,7 @@ const navItems =[
     },
     {
         name:'work',
-        url:'/workingHomePage#caseStudy',
+        url:'/#caseStudy',
         parent:null,
         orderInMainList:2,
         orderInSubList:null,
@@ -393,7 +393,7 @@ const Header = ({caseStudy}) => {
             <MobileNav style={mobileMenuListOpened ? {backgroundColor: '#f43908', minHeight: '810px'} : null}>
              
                     <div className={mobileMenuListOpened ? 'navBar_mobile--active' : 'navBar_mobile'}>
-                        <a  href='/workingHomePage'>
+                        <a  href='/'>
                             <figure className='logoWrap'>
                                 <img src={mobileMenuListOpened ? BlackLogoImg : RedLogoImg} alt=''/>
                             </figure>  
@@ -418,7 +418,7 @@ const Header = ({caseStudy}) => {
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
                         {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} />: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
                         </li>)}
-                        <a href='/workingHomePage'>                           
+                        <a href='/'>                           
                             <figure className='logoWrap'>
                                 <img src={!isScrolling ? (caseStudy? WhiteLogoImg :FullLogoImg) : RedLogoImg} alt=''/>
                             </figure>  

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import TwoImgsInRow,{Row,ImgItem} from './TwoImgsInRow'
+import TwoImgsInRow from './TwoImgsInRow'
 
 const ImgDisplay = styled.figure`
     margin: 0 auto 1.5rem;
