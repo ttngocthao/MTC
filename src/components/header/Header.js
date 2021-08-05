@@ -329,7 +329,7 @@ const Header = ({caseStudy}) => {
     const [mobileMenuListOpened,setMobileMenuListOpened]= useState(false);
     const [isScrolling,setIsScrolling] = useState(false);
     const [showBkgCaseStudyNav,setShowBkgCaseStudyNav]=useState(false);
-    const [currentPath,setCurrentPath] = useState(null);
+    const [currentPath,setCurrentPath] = useState('/');
     const [showAboutSubNav,setShowAboutSubNav]=useState(false);
     const scroll = useScroll();
 
@@ -342,7 +342,7 @@ const Header = ({caseStudy}) => {
        
         if(window){
             pathName = window.location.pathname;
-            if(pathName.slice(-1)==='/'){
+            if(pathName!=='/' && pathName.slice(-1)==='/'){
                 pathName = pathName.slice(0,-1);
             }
             setCurrentPath(pathName)
@@ -358,7 +358,7 @@ const Header = ({caseStudy}) => {
         
         if(caseStudyPaths.indexOf(pathName)>-1){
         //    console.log(caseStudyPaths[caseStudyPaths.indexOf(currentPath.pathname)])
-            console.log('case study page',currentPath);
+            // console.log('case study page',currentPath);
             if(scroll.y>600){
                 setShowBkgCaseStudyNav(true);
             }else{
@@ -371,8 +371,9 @@ const Header = ({caseStudy}) => {
  
     const getActiveItemClassName =(item)=>{
         const activeItemClassList = [];
-        // console.log('item',item);
+                
         if(item.name!=='work' && currentPath && currentPath === item.url){
+            
             activeItemClassList.push('active')
         }
         if(item.name==='work'&& currentPath && caseStudyPaths.indexOf(currentPath)>-1){
@@ -416,8 +417,9 @@ const Header = ({caseStudy}) => {
                 <div className={ 'navBar_desktop'}>
                    
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
-                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} />: <a className={`${getActiveItemClassName(item)} mainItemLink`} href={item.url} >{item.name}</a>}                        
+                        {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} />: <a className={`${getActiveItemClassName(item)}  mainItemLink`} href={item.url} >{item.name}</a>}                        
                         </li>)}
+                        
                         <a href='/'>                           
                             <figure className='logoWrap'>
                                 <img src={!isScrolling ? (caseStudy? WhiteLogoImg :FullLogoImg) : RedLogoImg} alt=''/>
