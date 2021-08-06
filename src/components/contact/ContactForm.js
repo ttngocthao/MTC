@@ -128,8 +128,8 @@ const ContactForm = () => {
                     
                     const res = await fetch(mailSendUrl,{
                         method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                        mode: 'no-cors', // no-cors, *cors, same-origin
-                        // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                        mode: 'same-origin', // no-cors, *cors, same-origin
+                        // cache: 'same-origin',  *default, no-cache, reload, force-cache, only-if-cached
                         // credentials: 'same-origin', // include, *same-origin, omit
                         headers: {
                         // 'Content-Type': 'application/json'
@@ -143,7 +143,7 @@ const ContactForm = () => {
                     // const res ={};
                     // res.status = 200;
                     
-                    if(res.status===200){
+                    if(res.ok){
                         actions.resetForm();
                         alert('Thank you for your email. We will contact you soon!')
                        // actions.setStatus({success:"Thank you for your email. We will contact you soon!"})
