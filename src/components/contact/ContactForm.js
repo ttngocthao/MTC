@@ -124,7 +124,7 @@ const ContactForm = () => {
                 }}
                 validate={(values)=>validate(values)}
                 onSubmit={async (values,actions) => {
-                    const mailSendUrl = 'https://mightycultured.co.uk/mail_form.php'
+                    const mailSendUrl = 'https://www.mightycultured.co.uk/mail_form.php'
                     
                     const res = await fetch(mailSendUrl,{
                         method: 'POST', // *GET, POST, PUT, DELETE, etc.
