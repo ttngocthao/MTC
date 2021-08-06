@@ -78,6 +78,7 @@ const SubmitButton = styled.button`
     }
 `
 
+// const NotificationModal =styled.
 
 const ContactForm = () => {
     const validate=(values)=>{
@@ -122,7 +123,7 @@ const ContactForm = () => {
                     message:''
                 }}
                 validate={(values)=>validate(values)}
-                onSubmit={async (values) => {
+                onSubmit={async (values,actions) => {
                     const mailSendUrl = 'https://mightycultured.co.uk/mail_form.php'
                     
                     const res = await fetch(mailSendUrl,{
@@ -138,18 +139,29 @@ const ContactForm = () => {
                         // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
                         body: new URLSearchParams(values) // body data type must match "Content-Type" header
                     })
-                    // await new Promise((r) => setTimeout(r, 500));
-                    // alert(JSON.stringify(values, null, 2));
-                    // console.log(values)
+                    
+                    // const res ={};
+                    // res.status = 200;
+                    
+                    if(res.status===200){
+                        actions.resetForm();
+                        alert('Thank you for your email. We will contact you soon!')
+                       // actions.setStatus({success:"Thank you for your email. We will contact you soon!"})
+                    }else{
+                        alert('There was an network error. Please contact us by phone instead!')
+                        //actions.setStatus({failed: "There was an error while we were trying to send your email. Please contact us by phone instead!"})
+                    }
                     console.log(res);
-                    // return res.json();
+                    
                 }}
                 >
-         {({isValid,dirty})=> {
+         {({isValid,dirty,status})=> {
                 return(
             <Form className="form ui">
                 <AllInputsContainer>
                     <LeftInputsContainer>
+                        {/* {status?.success && <div>{status.success}</div>}
+                        {status?.failed && <div>{status.failed}</div>} */}
                         <Field id="firstName" name="firstName" placeholder="First Name" component={TextField} />
                                         
                         <Field id="lastName" name="lastName" placeholder="Last Name" component={TextField}/>

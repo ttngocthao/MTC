@@ -60,7 +60,7 @@ const Layout = ({ title,caseStudy,children }) => {
                 }
                 if(window.sessionStorage.getItem('firstLoadDone')===null){
                 if(title==='Home' && window.location.hash===''){
-                        setShowGif(true);
+                        // setShowGif(true);
                         setTimeout(()=>{
                             setShowGif(false);
                         },4000)
