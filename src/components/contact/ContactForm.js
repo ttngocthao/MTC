@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { Formik, Field, Form ,ErrorMessage} from 'formik';
 import {Form as SMTForm} from 'semantic-ui-react'
@@ -78,8 +78,44 @@ const SubmitButton = styled.button`
     }
 `
 
-// const NotificationModal =styled.
+ const NotificationModal =styled.div`
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    padding:1rem;
+    background-color: #222;
+ `
+const NotificationMsg = styled.div`
+    background-color: #f43908;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+   
+    width:100%;
+    max-width: 500px;
+    padding:1rem;
+    text-align: center;
 
+    & button{
+       
+        background-color: #222;
+        border-radius: 4px;
+        font-weight: 900;
+        text-align: center;
+        font-size: 1.5rem;
+        color:white;
+        text-transform: uppercase;
+        display: block;        
+        
+        width: 120px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+`
 const ContactForm = () => {
     const validate=(values)=>{
         const requiredError = "Field is required";
@@ -111,6 +147,7 @@ const ContactForm = () => {
       
         return errors;
     };
+    const [showMsg,setShowMsg]= useState({state:false,msg:''});
     return (
         <FormWrap>
             <Formik
@@ -124,31 +161,33 @@ const ContactForm = () => {
                 }}
                 validate={(values)=>validate(values)}
                 onSubmit={async (values,actions) => {
-                    const mailSendUrl = 'https://www.mightycultured.co.uk/mail_form.php'
+                    // const mailSendUrl = '/mail_form.php'
                     
-                    const res = await fetch(mailSendUrl,{
-                        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                        mode: 'same-origin', // no-cors, *cors, same-origin
-                        // cache: 'same-origin',  *default, no-cache, reload, force-cache, only-if-cached
-                        // credentials: 'same-origin', // include, *same-origin, omit
-                        headers: {
-                        // 'Content-Type': 'application/json'
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        // redirect: 'follow', // manual, *follow, error
-                        // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                        body: new URLSearchParams(values) // body data type must match "Content-Type" header
-                    })
+                    // const res = await fetch(mailSendUrl,{
+                    //     method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    //     mode: 'same-origin', // no-cors, *cors, same-origin
+                    //     // cache: 'same-origin',  *default, no-cache, reload, force-cache, only-if-cached
+                    //     // credentials: 'same-origin', // include, *same-origin, omit
+                    //     headers: {
+                    //     // 'Content-Type': 'application/json'
+                    //     'Content-Type': 'application/x-www-form-urlencoded',
+                    //     },
+                    //     // redirect: 'follow', // manual, *follow, error
+                    //     // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                    //     body: new URLSearchParams(values) // body data type must match "Content-Type" header
+                    // })
                     
-                    // const res ={};
-                    // res.status = 200;
+                    const res ={};
+                    res.ok = true;
                     
                     if(res.ok){
                         actions.resetForm();
-                        alert('Thank you for your email. We will contact you soon!')
+                        setShowMsg({state:true, msg: 'Thank you for your email. We will contact you soon!'})
+                       // alert('Thank you for your email. We will contact you soon!')
                        // actions.setStatus({success:"Thank you for your email. We will contact you soon!"})
                     }else{
                         alert('There was an network error. Please contact us by phone instead!')
+                        setShowMsg({state:true,msg:'There was an network error. Please contact us by phone instead!'})
                         //actions.setStatus({failed: "There was an error while we were trying to send your email. Please contact us by phone instead!"})
                     }
                     console.log(res);
@@ -160,8 +199,11 @@ const ContactForm = () => {
             <Form className="form ui">
                 <AllInputsContainer>
                     <LeftInputsContainer>
-                        {/* {status?.success && <div>{status.success}</div>}
-                        {status?.failed && <div>{status.failed}</div>} */}
+                        {showMsg.state && <NotificationModal><NotificationMsg>
+                            <p>{showMsg.msg}</p>
+                            <button onClick={()=>setShowMsg({state:false,msg:''})}>Ok</button>
+                            </NotificationMsg></NotificationModal>}
+                       
                         <Field id="firstName" name="firstName" placeholder="First Name" component={TextField} />
                                         
                         <Field id="lastName" name="lastName" placeholder="Last Name" component={TextField}/>
