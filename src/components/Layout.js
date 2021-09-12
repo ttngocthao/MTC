@@ -42,7 +42,7 @@ const GifImgFigure = styled.figure`
 const Layout = ({ title,caseStudy,children }) => {
     const [showGif,setShowGif] = useState(true);
     const [hash,setHash]= useState(null)
-    // const {width} = useWindowSize();
+  
     useEffect(()=>{
         
 
@@ -60,7 +60,8 @@ const Layout = ({ title,caseStudy,children }) => {
                 }
                 if(window.sessionStorage.getItem('firstLoadDone')===null){
                 if(title==='Home' && window.location.hash===''){
-                        // setShowGif(true);
+                        
+                       
                         setTimeout(()=>{
                             setShowGif(false);
                         },4000)
@@ -83,7 +84,7 @@ const Layout = ({ title,caseStudy,children }) => {
         return(
             <GifImgContainer>
                 <GifImgFigure> 
-                    <img src={GifImg} alt=''/>
+                    <img src={GifImg} alt='logo animation' width='110' height='149'/>
                 </GifImgFigure>
             </GifImgContainer>
         )

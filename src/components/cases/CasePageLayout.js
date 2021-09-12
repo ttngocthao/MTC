@@ -32,16 +32,12 @@ export const RightCol = styled.div`
 
     @media only screen and (min-width: 1024px){
        max-width: 166px;
-        /* width: 30%; */
+       
                 
     }
 `
 const CasePageLayout = ({children,caseName,heroImg,caseDescription,caseNameArr}) => {
-    // useEffect(()=>{
-    //     if(window){
-    //         window.scrollTo(0,0);
-    //     }
-    // })
+   
     return (       
         <Layout title={caseName} caseStudy={true}>
             <title>{caseName}</title>

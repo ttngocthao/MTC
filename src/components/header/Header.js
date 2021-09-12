@@ -226,11 +226,13 @@ const DeskNav = styled.nav`
    
     .navBar_desktop{
        display: flex;
-       /* justify-content: center; */
        max-width: 850px;
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
+       li{
+           list-style: none;
+       }
         .logoWrap{
             max-width: 46px;
             
@@ -333,7 +335,7 @@ const Header = ({caseStudy}) => {
     const [showAboutSubNav,setShowAboutSubNav]=useState(false);
     const scroll = useScroll();
 
-    // const currentPath = typeof window !== 'undefined' ? window.location : '';
+   
     const caseStudyPaths = caseStudyData.map(item=>item.pageUrl);
 
     useEffect(()=>{
@@ -357,8 +359,7 @@ const Header = ({caseStudy}) => {
         
         
         if(caseStudyPaths.indexOf(pathName)>-1){
-        //    console.log(caseStudyPaths[caseStudyPaths.indexOf(currentPath.pathname)])
-            // console.log('case study page',currentPath);
+       
             if(scroll.y>600){
                 setShowBkgCaseStudyNav(true);
             }else{
@@ -379,7 +380,7 @@ const Header = ({caseStudy}) => {
         if(item.name==='work'&& currentPath && caseStudyPaths.indexOf(currentPath)>-1){
             activeItemClassList.push('active')
         }
-        // console.log(item.name,activeItemClassList);
+       
         return activeItemClassList.join(' ');
     }
 
@@ -394,7 +395,7 @@ const Header = ({caseStudy}) => {
             <MobileNav style={mobileMenuListOpened ? {backgroundColor: '#f43908', minHeight: '810px'} : null}>
              
                     <div className={mobileMenuListOpened ? 'navBar_mobile--active' : 'navBar_mobile'}>
-                        <a  href='/'>
+                        <a  href='/' aria-label='Mighty Culture - Home'>
                             <figure className='logoWrap'>
                                 <img src={mobileMenuListOpened ? BlackLogoImg : RedLogoImg} alt=''/>
                             </figure>  
@@ -407,24 +408,26 @@ const Header = ({caseStudy}) => {
                     </div>
                     {mobileMenuListOpened && <ul className='menuList_mobile'>
                     {navItems.filter(item=>!item.subNav).map((item,index)=><li onClick={()=>setMobileMenuListOpened(false)} className='menuItem_mobile' key={index}>
-                        <a href={item.url} >{item.name}</a>
+                        <a href={item.url} aria-label={`Mighty Culture - ${item.name}`}>{item.name}</a>
                         </li>)}
                     </ul>}
                     
                    
             </MobileNav>
             <DeskNav >
-                <div className={ 'navBar_desktop'}>
+                <ul className={ 'navBar_desktop'}>
                    
                     {navItems.filter(item=>!item.subNav && item.orderInMainList<3).map((item,index)=><li className='menuItem_desktop' key={index}>
+                       
                         {item.name==='work' ?  <AnchorLink className={`${getActiveItemClassName(item)} mainItemLink`} to={item.url} title={item.name} />: <a className={`${getActiveItemClassName(item)}  mainItemLink`} href={item.url} >{item.name}</a>}                        
                         </li>)}
-                        
-                        <a href='/'>                           
+                    <li>
+                        <a href='/' aria-label='Mighty Culture - Home'>                           
                             <figure className='logoWrap'>
                                 <img src={!isScrolling ? (caseStudy? WhiteLogoImg :FullLogoImg) : RedLogoImg} alt=''/>
                             </figure>  
                         </a>
+                    </li>
                     {navItems.filter(item=>!item.subNav && item.orderInMainList>=3).map((item,index)=>{
                         
                     return(
@@ -434,11 +437,11 @@ const Header = ({caseStudy}) => {
                                      <AnchorLink className={`subItemLink`} title={subItem.name} to={subItem.url} onAnchorLinkClick={()=>{setShowAboutSubNav(false)}}/>
                                     </li>))}
                                 </AboutSubNavList>}
-                            <a href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} ${item.name==='about' && showAboutSubNav ? 'active' : null} mainItemLink`}>{item.name}</a>
+                            <a aria-label={`Mighty Culture - ${item.name}`} href={item.url} className={`${item.name==='contact' ? 'contactBtn':''} ${getActiveItemClassName(item)} ${item.name==='about' && showAboutSubNav ? 'active' : null} mainItemLink`}>{item.name}</a>
                         </li>  
                     )})}              
-                      
-                    </div>
+                  
+                    </ul>
             </DeskNav>
         </StyledHeader>
     )

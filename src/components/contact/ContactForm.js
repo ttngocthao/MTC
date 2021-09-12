@@ -161,25 +161,26 @@ const ContactForm = () => {
                 }}
                 validate={(values)=>validate(values)}
                 onSubmit={async (values,actions) => {
-                    // const mailSendUrl = '/mail_form.php'
                     
-                    // const res = await fetch(mailSendUrl,{
-                    //     method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                    //     mode: 'same-origin', // no-cors, *cors, same-origin
-                    //     // cache: 'same-origin',  *default, no-cache, reload, force-cache, only-if-cached
-                    //     // credentials: 'same-origin', // include, *same-origin, omit
-                    //     headers: {
-                    //     // 'Content-Type': 'application/json'
-                    //     'Content-Type': 'application/x-www-form-urlencoded',
-                    //     },
-                    //     // redirect: 'follow', // manual, *follow, error
-                    //     // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                    //     body: new URLSearchParams(values) // body data type must match "Content-Type" header
-                    // })
+                    const mailSendUrl = '/mail_form.php';
                     
-                    const res ={};
-                    res.ok = true;
+                    const res = await fetch(mailSendUrl,{
+                        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                        mode: 'same-origin', // no-cors, *cors, same-origin
+                        // cache: 'same-origin',  *default, no-cache, reload, force-cache, only-if-cached
+                        // credentials: 'same-origin', // include, *same-origin, omit
+                        headers: {
+                        // 'Content-Type': 'application/json'
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        // redirect: 'follow', // manual, *follow, error
+                        // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                        body: new URLSearchParams(values) // body data type must match "Content-Type" header
+                    })
                     
+                    // const res ={};
+                    // res.ok = true;
+                    console.log(res);
                     if(res.ok){
                         actions.resetForm();
                         setShowMsg({state:true, msg: 'Thank you for your email. We will contact you soon!'})
@@ -190,7 +191,7 @@ const ContactForm = () => {
                         setShowMsg({state:true,msg:'There was an network error. Please contact us by phone instead!'})
                         //actions.setStatus({failed: "There was an error while we were trying to send your email. Please contact us by phone instead!"})
                     }
-                    console.log(res);
+                   
                     
                 }}
                 >

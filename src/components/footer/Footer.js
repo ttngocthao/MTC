@@ -13,37 +13,44 @@ const socialMediaData = [
     {
         iconImg: LinkedInIcon,
         linkUrl: 'https://www.linkedin.com/company/mighty-cultured/',
-        orderInList: 2
+        orderInList: 2,
+        label:"visit our LinkedIn"
     },
     {
         iconImg: InstagramIcon,
         linkUrl: 'https://www.instagram.com/mightyculturedltd/',
-        orderInList: 5
+        orderInList: 5,
+        label:"visit our Instagram"
     },
     {
         iconImg: FaceBookIcon,
         linkUrl: 'https://www.facebook.com/mightycultured',
-        orderInList: 7
+        orderInList: 7,
+        label:"visit our Facebook"
     },
     {
         iconImg:TrustpilotIcon,
         linkUrl:'https://uk.trustpilot.com/review/www.mightycultured.co.uk',
-        orderInList:1
+        orderInList:1,
+        label:"visit our Trustpilot"
     },
     {
         iconImg:DribbleIcon,
         linkUrl:'https://dribbble.com/MightyCultured',
-        orderInList:3
+        orderInList:3,
+        label:"visit our Dribble"
     },
     {
         iconImg:BehanceIcon,
         linkUrl:'https://www.behance.net/mightycultured',
-        orderInList:4
+        orderInList:4,
+        label:"visit our Behance"
     },
     {
         iconImg:TwitterIcon,
         linkUrl:'https://twitter.com/MightyCultured',
-        orderInList:6
+        orderInList:6,
+        label:"visit our Twitter"
     }
 ]
 
@@ -82,6 +89,7 @@ const CopyRight = styled.div`
     /* position: absolute;
     top:2rem;
     left:2rem; */
+    color: black;
     padding:0rem 0 1rem;
      @media only screen and (min-width: 700px){         
         /* left: 7.3%; */
@@ -104,7 +112,7 @@ const Footer = () => {
             <StyledFooter>
             <CopyRight>© Mighty Cultured Ltd {currentYear}</CopyRight>
             <div>
-            {orderedList.map((item, index) => <SocialMediaItem key={index} target='_blank' href={item.linkUrl}>
+            {orderedList.map((item, index) => <SocialMediaItem aria-label={item.label} key={index} target='_blank' href={item.linkUrl}>
                 <img src={item.iconImg} style={{ width: '1.5rem' }} alt='' />
             </SocialMediaItem>)}</div>
         </StyledFooter>

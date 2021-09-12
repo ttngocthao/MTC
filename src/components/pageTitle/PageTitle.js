@@ -110,11 +110,7 @@ const PageTitle = ({contactTitle,className,children}) => {
             </TitleWrap>
         )
     }
-        //  return (
-        //     <TitleWrap>
-        //         {children}
-        //     </TitleWrap>
-        // )
+       
 }
 
 export default PageTitle

@@ -8,7 +8,7 @@ export default function useScroll() {
     lastY: 0
   });
 
-  // set up event listeners
+ 
   useEffect(() => {
     const handleScroll = () => {
       setData((last) => {

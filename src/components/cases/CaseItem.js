@@ -61,23 +61,11 @@ const CaseDescriptionWrap = styled.div`
               /* padding-left: 1rem; */
          }
 `
-// const MobileItemWrap = styled.li`
-//     list-style: none;
-//     box-sizing: border-box;
-//     position: relative;
-//     margin: 0 0 1rem;
-//     figure{
-//         margin:0;
-//         img{
-//             width:100%;
-//         }
-//     }
-// `
+
 
 
 const CaseItem = ({ title, description, bkgImg, pageUrl,mobileImg, orderInList }) => {
-    // const {width} = useWindowSize();
-    // const [showMobileLayout,setMobileLayout]= useState(false)
+  
     const [showDescription, setShowDescription] = useState(false)
     const hoveredViewCaseBtnStyles = {border:'#000 solid 2px',borderRadius:'5px',backgroundColor:'rgba(0,0,0,0)',color:'#000'}
     const hoveredArrowStyles ={color:'#000'}
@@ -87,18 +75,10 @@ const CaseItem = ({ title, description, bkgImg, pageUrl,mobileImg, orderInList }
     const mouseLeaveHandle =()=>{
         setShowDescription(false)
     }
-    // useEffect(() => {
-    //    // console.log('width',width);
-    //     if(width<700){
-    //         setMobileLayout(true)
-    //     }else{
-    //         setMobileLayout(false)
-    //     }
-    // }, [width])
-    // if(!showMobileLayout){
+  
        return (
         <ItemWrap style={{ backgroundImage: `url(${bkgImg})`}} onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
-            <a href={pageUrl} rel="noreferrer">
+            <a href={pageUrl} rel="noreferrer" aria-label={`${title} -  ${description}`}>
                <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
            
                 {showDescription && 
@@ -110,24 +90,7 @@ const CaseItem = ({ title, description, bkgImg, pageUrl,mobileImg, orderInList }
             </a>           
         </ItemWrap>
         ) 
-    // }else{
-    //     return(<MobileItemWrap onMouseEnter={mouseEnterHandle} onMouseLeave={mouseLeaveHandle}>
-    //         <a href={pageUrl} rel="noreferrer">
-    //             <figure >
-    //                 <img  alt='' src={mobileImg}/>
-    //             </figure> 
-    //             <CaseDescriptionWrap style={showDescription ? {opacity:1}: null}>{description}</CaseDescriptionWrap>
-           
-    //             {showDescription && 
-    //                 <ViewCaseButton style={showDescription ? hoveredViewCaseBtnStyles : null}>
-    //                     <h3 style={{ paddingRight: '1rem',marginBottom:0,fontWeight:400 }}>{title}</h3>
-    //                     <RedArrowRight size='24' style={showDescription ? hoveredArrowStyles : null}/>
-    //                 </ViewCaseButton>
-    //             }  
-    //         </a>
-            
-    //     </MobileItemWrap>)
-    // }
+   
     
 }
 
