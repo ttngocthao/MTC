@@ -37,7 +37,7 @@ const TitleWrap = styled.div`
     h2{
         max-width: 220px;
         margin: .5rem 0;
-        color:#f43908;
+        color:white;
         font-size:1.2rem;
         font-weight: 600;
         line-height: 1;
@@ -49,18 +49,6 @@ const TitleWrap = styled.div`
          }
         
     }
-    /* &.title--homepage{
-      
-             display: none;
-      
-       
-         @media only screen and (min-width: 700px){
-            
-             display: block;
-              
-              /* padding-left: 1rem; */
-         }
-    } */
 `
 
 const ContactTitleWrap = styled(TitleWrap)`

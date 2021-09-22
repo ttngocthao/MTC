@@ -7,7 +7,7 @@ import Contact  from '../components/contact/Contact';
 import styled from 'styled-components';
 
 import Hero from '../components/hero/Hero';
-import HeroImg from '../images/hero/fullHomeHero.png';
+import HeroImg from '../images/hero/fullHomeHero1.png';
 
 
 const HomePageIntro = styled.div`
